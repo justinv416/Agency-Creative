@@ -13,6 +13,11 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   width: 80%;
   max-width: 2160px;
@@ -21,6 +26,7 @@ li {
 header {
   background: url(../../../assets/home-1.jpeg);
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -28,12 +34,39 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
-
+.navigation__container {
+  width: 20%;
+}
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 0.7rem;
+}
+.navigation__logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 2160px;
+  margin: 0 auto;
 }
 
 * {
