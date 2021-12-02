@@ -58,11 +58,45 @@ header {
   width: 100%;
   font-size: 0.7rem;
 }
+.navigation__list .link {
+  position: relative;
+}
+.navigation__list .link:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  bottom: -2px;
+  left: 0;
+  -webkit-animation: grow 0.5s forwards;
+          animation: grow 0.5s forwards;
+}
+.navigation__list .fa-shopping-bag {
+  position: relative;
+}
 .navigation__logo {
   font-size: 2rem;
   font-weight: bold;
 }
 
+@-webkit-keyframes grow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .wrapper {
   width: 80%;
   max-width: 2160px;
