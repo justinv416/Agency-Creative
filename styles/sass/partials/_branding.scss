@@ -1,9 +1,36 @@
 #branding {
     background: $lightSage;
+}
 
-    img {
-        width: 100%;
-        max-width: 40%;
-        padding: 10% 0;
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    // background-color: chocolate;
+    justify-content: center;
+    width: 100%;
+
+    &__content {
+        font-family: $montserrat;
+        font-weight: normal;
+        text-align: center;
+        // background-color: cyan;
+        width: 25%;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: .8rem;
+            line-height: 30px;
+        }
     }
 }
