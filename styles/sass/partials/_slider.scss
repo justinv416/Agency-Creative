@@ -1,0 +1,28 @@
+#slider {
+    background: $offWhite;
+    font-family: $openSans;
+
+    p {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        font-style: italic;
+    }
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 100px 0 50px 0;
+
+    .fa-angle-left, .fa-angle-right {
+        font-size: 2rem;
+    }
+
+    &--image {
+        border-radius: 50%;
+    }
+
+    
+}
