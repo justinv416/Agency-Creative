@@ -19,8 +19,8 @@ a {
 }
 
 .wrapper {
-  width: 80%;
-  max-width: 2160px;
+  width: 50%;
+  max-width: 1080px;
 }
 
 #header-main {
@@ -395,6 +395,117 @@ a {
   text-align: center;
   padding: 50px 0;
   border-top: 1px solid #F6F6F6;
+}
+
+.wrapper {
+  width: 70%;
+}
+
+.article {
+  font-family: "Open Sans", sans-serif;
+}
+.article__information--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.article__information--container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  bottom: -50px;
+}
+.article h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.article__link {
+  margin: 20px 0 100px 0;
+}
+.article__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.article__information--author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.article__information--author img {
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.article__information--author--info {
+  font-weight: normal;
+}
+.article__information--category {
+  margin: 0 50px;
+}
+.article h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.article__content p:first-of-type {
+  font-weight: bold;
+  padding: 100px 0 0 0;
+}
+.article__content p:nth-of-type(2) {
+  padding: 50px 0;
+}
+.article__content p:nth-of-type(3) {
+  padding: 0 0 50px 0;
+}
+.article__content p:nth-of-type(4) {
+  padding: 0 0 50px 0;
+}
+.article__sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.article__sm p {
+  margin-right: 20px;
+}
+.article__sm .icons .fa-twitter {
+  margin: 0 20px;
+}
+
+.posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+}
+.comment img {
+  margin-right: 50px;
+}
+.comment__container {
+  background: #F6F6F6;
+  padding: 20px;
 }
 
 * {
