@@ -1,0 +1,29 @@
+#team {
+    background: $offWhite;
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.team__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--description {
+        max-width: 540px;
+        height: 270px;
+        background: $lightSage;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    &--join {
+        background: chartreuse;
+        width: 100%;
+        max-width: 270px;
+        height: 270px;
+    }
+}
