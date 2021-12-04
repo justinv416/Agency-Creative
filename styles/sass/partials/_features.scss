@@ -16,7 +16,7 @@
 
 .inner-container {
     display: flex;
-    width: 100%;
+    width: 90%;
     // background-color: coral;
     padding: 40px 0;
 }
@@ -53,7 +53,7 @@
 
     p {
         font-family: $openSans;
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -63,8 +63,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 60px;
     margin-right: 20px;
 }
 
