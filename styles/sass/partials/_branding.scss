@@ -5,7 +5,28 @@
 .image-container {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    position: relative;
+    background: blueviolet;
+    margin: auto;
+    width: 100%;
+    max-width: 40%;
+}
+
+.homeImg-2 {
+    width: 100%;
+    margin: 40px;
+}
+
+.circle {
+    // background-color: chocolate;
+    max-width: 100%;
+    position: absolute;
+    left: calc(-5% + 1px);
+    top: -85px;
+}
+
+.circle-img {
+    max-width: 100%;
 }
 
 .container {
@@ -33,4 +54,18 @@
             line-height: 30px;
         }
     }
+}
+
+.image-container-2 {
+    background-color: chocolate;
+    display: flex;
+    height: 500px;
+}
+
+.home-img-2 {
+    width: 20%;
+}
+
+.circle-img-2 {
+    width: 20%;
 }
