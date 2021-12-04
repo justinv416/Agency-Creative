@@ -23,8 +23,15 @@ a {
   max-width: 2160px;
 }
 
-header {
+#header-main {
   background: url(../../../assets/home-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#header-blog {
+  background: url(../../../assets/blog-1.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -361,9 +368,33 @@ header {
   text-transform: upppercase;
 }
 
-#footer {
+.footer {
   background: #333;
   color: #F6F6F6;
+}
+.footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 200px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.footer__contact ul {
+  margin: 20px 0;
+}
+.footer__posts ul {
+  margin: 20px 0;
+}
+
+.footer__logo {
+  text-align: center;
+  padding: 50px 0;
+  border-top: 1px solid #F6F6F6;
 }
 
 * {
