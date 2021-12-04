@@ -253,6 +253,7 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+
 .feature-content h3 {
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
