@@ -1,4 +1,29 @@
-#footer {
+.footer {
     background: $black;
     color: $offWhite;
+
+    .wrapper {
+        display: flex;
+        padding: 200px 0;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__contact {
+        ul {
+            margin: 20px 0;
+        }
+    }
+
+    &__posts {
+        ul {
+            margin: 20px 0;
+        }
+    }
+}
+
+.footer__logo {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid $offWhite;
 }
