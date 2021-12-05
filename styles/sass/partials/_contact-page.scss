@@ -1,0 +1,27 @@
+.wrapper {
+    width: 70%;
+}
+
+header {
+    
+    .navigation-contact {
+        background: $white;
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+.contact__title--container {
+    position: relative;
+
+    h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: $montserrat;
+
+        span {
+            display: block;
+        }
+    }
+}

@@ -508,6 +508,30 @@ a {
   padding: 20px;
 }
 
+.wrapper {
+  width: 70%;
+}
+
+header .navigation-contact {
+  background: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.contact__title--container {
+  position: relative;
+}
+.contact__title--container h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.contact__title--container h2 span {
+  display: block;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
