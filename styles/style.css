@@ -43,7 +43,7 @@ a {
   height: 100vh;
 }
 
-#header-blog {
+#header__blog {
   background: url(../../../assets/blog-1.jpeg);
   background-size: cover;
   background-position: center;
@@ -475,14 +475,19 @@ a {
   margin: 40px 0 20px 0;
 }
 
-.wrapper {
-  width: 70%;
-}
-
 .article {
   font-family: "Open Sans", sans-serif;
 }
-.article__information--container {
+.article .wrapper {
+  width: 70%;
+}
+.article__link {
+  margin: 20px 0 100px 0;
+}
+.article__link a {
+  color: #999;
+}
+.article__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,7 +496,10 @@ a {
           justify-content: space-between;
   position: relative;
 }
-.article__information--container::after {
+.article h2 {
+  padding: 100px 0 0 0;
+}
+.article__container::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -503,8 +511,30 @@ a {
   text-transform: uppercase;
   font-weight: normal;
 }
-.article__link {
-  margin: 20px 0 100px 0;
+.article__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.article__author img {
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.article__author--info p {
+  font-weight: normal;
+  color: #999;
+}
+.article__date p, .article__tags p {
+  color: #999;
+}
+.article__category {
+  margin: 0 50px;
+}
+.article__category p {
+  color: #999;
 }
 .article__information {
   display: -webkit-box;
@@ -514,31 +544,17 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.article__information--author {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.article__information--author img {
-  border-radius: 50%;
-  margin-right: 40px;
-}
-.article__information--author--info {
-  font-weight: normal;
-}
-.article__information--category {
-  margin: 0 50px;
-}
 .article h2 {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   font-weight: bold;
 }
+.article__content p {
+  color: #999;
+}
 .article__content p:first-of-type {
+  color: #333;
   font-weight: bold;
   padding: 100px 0 0 0;
 }
