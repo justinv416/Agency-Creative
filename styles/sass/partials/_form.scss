@@ -1,0 +1,53 @@
+#comment__form {
+    padding: 200px 0;
+
+    h2 {
+        text-transform: uppercase;
+        font-family: $montserrat;
+        padding: 0 0 50px 0;
+        position: relative;
+    }
+
+    h2:after {
+        content: '';
+        height: 1px;
+        background: $lightGrey;
+        position: absolute;
+        width: 100%;
+        bottom: 30px;
+        left: 0;
+    }
+
+     &--name, &--email, &--subject {
+        border-top-style: none;
+        border-left-style: none;
+        border-right-style: none;
+        border-bottom: 1px solid $lightGrey;
+        padding: 0 0 10px 0;
+        width: 32%;
+    }
+}
+
+.comment__form {
+    &--container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        margin: 50px 0;
+        border-style: none;
+        border-bottom: 1px solid $lightGrey;
+        resize: none;
+    }
+
+    &--button {
+        background: none;
+        border-style: none;
+        border-bottom: 1px solid $black;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+    }
+}

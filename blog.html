@@ -155,15 +155,17 @@
         </div>
     </section>
 
-    <section id="comment__form" class="comment__form">
+    <section id="comment__form">
         <div class="wrapper">
             <h2>Leave a comment</h2>
-            <form action="">
-                <input type="text" id="comment__form--name" placeholder="Enter your name..." required>
-                <input type="email" name="" id="comment__form--email" placeholder="Enter your email" required>
-                <input type="text" id="comment__form--subject" placeholder="Subject (optional)">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button type="submit">Submit</button>
+            <form action="" class="comment__form">
+                <div class="comment__form--container">
+                    <input type="text" id="comment__form--name" placeholder="Enter your name..." required>
+                    <input type="email" name="" id="comment__form--email" placeholder="Enter your email" required>
+                    <input type="text" id="comment__form--subject" placeholder="Subject (optional)">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Here goes your comment"></textarea>
+                <button type="submit" class="comment__form--button">Submit comment</button>
             </form>
         </div>
     </section>

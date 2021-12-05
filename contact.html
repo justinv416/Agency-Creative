@@ -37,45 +37,52 @@
                 </div>
             </nav>
     </header>
-    <section id="contact__title">
-        <div class="contact__title--container">
-            <img src="./assets/contact-1.jpeg" alt="">
+    <section id="contact__title" class="contact">
+        <div class="contact__container">
+            <img src="./assets/contact-1.jpeg" alt="" class="contact__image">
             <div class="wrapper">
                 <h2>Contact <span>Us</span></h2>
-                <h3>contact details</h3>
-                <p>If you need any help, please contact us or send us an email or go to our forum. we are sure that you can receive our reply as soon as possible.</p>
-                <div class="contact__title--icons">
-                    <div class="contact__title--icons--item">
+                <div class="contact__title--details">
+                    <h3>contact details</h3>
+                    <p>If you need any help, please contact us or send us an email or go to our forum. we are sure that you can receive our
+                        reply as soon as possible.</p>
+                </div>
+                <div class="contact__icons">
+                    <div class="contact__icons--item">
                         <i class="fas fa-mobile-alt"></i>
                         <h3>Phone</h3>
                         <p>Phone 01: 123, 456 7890</p>
                         <p>Phone 02: 345 678 9101</p>
                     </div>
-                    <div class="contact__title--icons--item">
+                    <div class="contact__icons--item">
                         <i class="fas fa-map-marker-alt"></i>
                         <h3>Address</h3>
                         <p>6591 Orchard Street, Toronto, Ontario</p>
                     </div>
-                    <div class="contact__title--icons--item">
+                    <div class="contact__icons--item">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>contact@creative.com</p>
                         <p>info@creative.com</p>
                     </div>
                 </div>
-                <h3>Get in touch with us</h3>
-                <p>If you have any questions, Please don't hesitate to send us a message</p>
-                <section id="comment-form">
-                        <form action="">
-                            <input type="text" placeholder="Enter your name" required>
-                            <input type="email" name="" id="" placeholder="Enter your email" required>
-                            <input type="text" placeholder="Subject (optional)">
-                            <input type="text">
-                            <button type="submit">Submit</button>
+                <div class="contact__touch">
+                    <h3>Get in touch with us</h3>
+                    <p>If you have any questions, Please don't hesitate to send us a message</p>
+                </div>
+                <section id="comment__form">
+                        <form action="" class="comment__form">
+                            <div class="comment__form--container">
+                                <input type="text" id="comment__form--name" placeholder="Enter your name..." required>
+                                <input type="email" name="" id="comment__form--email" placeholder="Enter your email" required>
+                                <input type="text" id="comment__form--subject" placeholder="Subject (optional)">
+                            </div>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Here goes your comment"></textarea>
+                            <button type="submit" class="comment__form--button">Send message</button>
                         </form>
                     </div>
                 </section>
-                <img src="./assets/contact-2.jpeg" alt="">
+                <img src="./assets/contact-2.jpeg" alt="" class="contact__image">
             </div>
         </div>
     </section>

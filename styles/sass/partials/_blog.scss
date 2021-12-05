@@ -214,34 +214,3 @@
     }
 }
 
-.comment__form {
-    h2 {
-        text-transform: uppercase;
-        font-family: $montserrat;
-        padding: 50px 0;
-        position: relative;
-    }
-
-    h2:after {
-        content: '';
-        height: 1px;
-        background: $lightGrey;
-        position: absolute;
-        width: 100%;
-        bottom: 30px;
-        left: 0;
-    }
-}
-
-#comment__form {
-    &--name, &--email, &--subject {
-        border-top-style: none;
-        border-left-style: none;
-        border-right-style: none;
-        border-bottom: 1px solid $lightGrey;
-    }
-
-    textarea {
-        display: block;
-    }
-}
