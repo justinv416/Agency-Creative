@@ -1,29 +1,30 @@
-#team {
+.team {
     background: $offWhite;
 
     h3 {
         text-align: center;
     }
-}
 
-.team__container {
+    &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    &--description {
-        max-width: 540px;
-        height: 270px;
-        background: aqua;
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-    }
+        &--description {
+            max-width: 540px;
+            height: 270px;
+            background: aqua;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
 
-    &--join {
-        background: chartreuse;
-        width: 100%;
-        max-width: 270px;
-        height: 270px;
+        &--join {
+            background: chartreuse;
+            width: 100%;
+            max-width: 270px;
+            height: 270px;
+        }
     }
 }
+

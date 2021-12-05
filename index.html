@@ -20,18 +20,18 @@
             <nav class="navigation">
                 <div class="navigation__container">
                     <ul class="navigation__list">
-                        <li class="navigation__list--item"><a href="index.html" class="link">Home</a></li>
-                        <li class="navigation__list--item"><a href="blog.html" class="link">Blog</a></li>
-                        <li class="navigation__list--item"><a href="#" class="link">Portfolio</a></li>
+                        <li class="navigation__item"><a href="index.html" class="link">Home</a></li>
+                        <li class="navigation__item"><a href="blog.html" class="link">Blog</a></li>
+                        <li class="navigation__item"><a href="#" class="link">Portfolio</a></li>
                     </ul>
                 </div>
                 <h1 class="navigation__logo"><a href="index.html">Creative</a></h1>
                 <div class="navigation__container">
                     <ul class="navigation__list">
-                        <li class="navigation__list--item"><a href="#" class="link">Shop</a></li>
-                        <li class="navigation__list--item"><a href="contact.html" class="link">Contact</a></li>
-                        <li class="navigation__list--item"><a href="#"><i class="fas fa-search"></i></a></li>
-                        <li class="navigation__list--item"><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                        <li class="navigation__item"><a href="#" class="link">Shop</a></li>
+                        <li class="navigation__item"><a href="contact.html" class="link">Contact</a></li>
+                        <li class="navigation__item"><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li class="navigation__item"><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -39,19 +39,23 @@
     </header>
     <main>
 
-        <section id="branding">
-            <div class="image-container">
-                <img src="./assets/home-2.jpeg" alt="" class="homeImg-2">
-                <div class="circle">
-                    <img src="./assets/home-circle-text.png" alt="" class="circle-img">
+        <section id="branding" class="branding">
+            <div class="branding__container">
+                <div class="branding__image">
+                    <div class="branding__image--top">
+                        <img src="./assets/home-circle-text.png" alt="" class="circle-img">
+                    </div>
+                    <div class="branding__image--bottom">
+                        <img src="./assets/home-2.jpeg" alt="" class="homeImg-2">
+                    </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="container__content">
+            <div class="branding__content">
+                <div class="branding__content--left">
                     <h2>Branding</h2>
                     <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
                 </div>
-                <div class="container__content">
+                <div class="branding__content--right">
                     <h2>Design & Develop</h2>
                     <p>Venture first mover advantage incubator metrics focus backing business-to-consumer.</p>
                 </div>
@@ -60,9 +64,9 @@
 
         <section id="slider">
             <div class="wrapper">
-                <div class="slider-container">
+                <div class="slider__container">
                     <i class="fas fa-angle-left"></i>
-                    <img src="./assets/home-3.jpeg" alt="" class="slider-container--image">
+                    <img src="./assets/home-3.jpeg" alt="" class="slider__container--image">
                     <i class="fas fa-angle-right"></i>
                 </div>
                 <p>
@@ -75,63 +79,63 @@
             </div>
         </section>
 
-        <section id="features">
-            <div class="features--container">
-                <div class="inner-container">
-                    <div class="content--container">
-                        <div class="icon-container">
+        <section id="features" class="features">
+            <div class="features__container">
+                <div class="features__container--inner">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-magic"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Unique Design</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
                     </div>
-                    <div class="content--container">
-                        <div class="icon-container">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-map-pin"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Seo Marketing</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
                     </div>
                 </div>
-                <div class="inner-container">
-                    <div class="content--container">
-                        <div class="icon-container">
+                <div class="features__container--inner">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-desktop"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Retina Ready</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
                     </div>
-                    <div class="content--container">
-                        <div class="icon-container">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-shopping-bag"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Ecommerce Ready</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
                     </div>
                 </div>
-                <div class="inner-container">
-                    <div class="content--container">
-                        <div class="icon-container">
+                <div class="features__container--inner">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-sliders-h"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Advanced Options</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
                     </div>
-                    <div class="content--container">
-                        <div class="icon-container">
+                    <div class="features__container--content">
+                        <div class="features__container--icon">
                             <i class="fas fa-smile"></i>
                         </div>
-                        <div class="feature-content">
+                        <div class="features__container--copy">
                             <h3>Customizable</h3>
                             <p>Twitter validation first mover advanage advisor beta churn rate low hanging fruit burn</p>
                         </div>
@@ -140,7 +144,7 @@
             </div>
         </section>
 
-        <section id="team">
+        <section id="team" class="team">
             <div class="wrapper">
                 <h3>Meet Our Team</h3>
                 <div class="team__container">
@@ -163,7 +167,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact">
             <div class="contact__content">
                 <h4>Drop us a line</h4>
                 <p>
