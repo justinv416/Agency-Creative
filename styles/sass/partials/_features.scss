@@ -1,5 +1,6 @@
 .features {
-    background: url(../../../assets/home-4.jpeg);
+    background: url(../../../assets/home-4.jpeg) no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     height: 100vh;
@@ -43,6 +44,7 @@
 
             p {
                 font-family: $openSans;
+                color: $lightGrey;
                 width: 80%;
             }
         }

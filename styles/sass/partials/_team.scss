@@ -1,5 +1,5 @@
 .team {
-    background: $offWhite;
+    background: $white;
 
     h3 {
         text-align: center;
@@ -13,17 +13,29 @@
         &--description {
             max-width: 540px;
             height: 270px;
-            background: aqua;
+            background: $offWhite;
             display: flex;
-            justify-content: flex-end;
             flex-direction: column;
+            justify-content: flex-end;
+            padding: 50px;
+            h4 {
+                margin-bottom: 20px;
+            }
         }
 
         &--join {
-            background: chartreuse;
+            text-transform: uppercase;
             width: 100%;
             max-width: 270px;
             height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $openSans;
+            padding: 50px;
+            text-align: center;
+            letter-spacing: 0.3px;
+            font-size: .875rem;
         }
     }
 }

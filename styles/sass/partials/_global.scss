@@ -8,6 +8,19 @@ html {
     font-size: 125%;
 }
 
+body p {
+    font-size: .875rem;
+    font-family: $openSans;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+}
+
+h3, h4, h5 {
+    font-family: $montserrat;
+    letter-spacing: 1.8px;
+    font-weight: normal;
+}
+
 li {
     list-style-type: none;
 }

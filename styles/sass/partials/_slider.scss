@@ -1,8 +1,9 @@
 #slider {
-    background: $offWhite;
+    background: $white;
     font-family: $openSans;
 
     p {
+        color: $black;
         width: 50%;
         text-align: center;
         margin: auto;
@@ -25,6 +26,10 @@
     .fa-angle-left, .fa-angle-right {
         font-size: 2.5rem;
         margin-bottom: 50px;
+    }
+
+    .fa-angle-left:hover, .fa-angle-right:hover {
+        opacity: .5;
     }
 
     &--image {
