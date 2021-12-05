@@ -9,7 +9,7 @@ html {
   font-size: 125%;
 }
 
-body p {
+body p, ul, label {
   font-size: 0.875rem;
   font-family: "Open Sans", sans-serif;
   line-height: 24px;
@@ -293,27 +293,45 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
+  width: 110px;
   height: 60px;
-  margin-right: 20px;
+  margin-right: 30px;
+}
+.features__container--icon i {
+  font-size: 1.5rem;
 }
 .features__container--copy h3 {
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
   font-weight: normal;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
 .features__container--copy p {
   font-family: "Open Sans", sans-serif;
   color: #999;
   width: 80%;
+  line-height: 30px;
 }
 
 .team {
   background: #FFF;
+  position: relative;
+}
+.team .line {
+  width: 1px;
+  height: 60px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 3;
 }
 .team h3 {
+  text-transform: uppercase;
   text-align: center;
+  padding-top: 100px;
 }
 .team__container {
   display: -webkit-box;
@@ -324,9 +342,10 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 100px 0 200px 0;
 }
 .team__container--description {
-  max-width: 540px;
+  width: calc(540px + 20px);
   height: 270px;
   background: #F6F6F6;
   display: -webkit-box;
@@ -407,28 +426,53 @@ a {
   background: #333;
   color: #F6F6F6;
 }
+.footer h5 {
+  text-transform: uppercase;
+}
 .footer .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 200px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer__contact ul {
-  margin: 20px 0;
+  margin: 40px 0 20px 0;
+}
+.footer__sm i:nth-of-type(2) {
+  margin: 0 20px;
+}
+.footer__posts h5 {
+  text-align: center;
 }
 .footer__posts ul {
-  margin: 20px 0;
+  margin: 40px 0 0 0;
+  line-height: 30px;
+}
+.footer__posts li {
+  list-style-type: disc;
 }
 .footer__logo {
   text-align: center;
   padding: 50px 0;
   border-top: 1px solid #F6F6F6;
+}
+.footer__form {
+  text-align: end;
+}
+.footer__form input[type=email] {
+  padding: 10px;
+}
+.footer__form button {
+  background: #C3DAB7;
+  border: none;
+  padding: 10px;
+}
+.footer__form label {
+  display: block;
+  margin: 40px 0 20px 0;
 }
 
 .wrapper {

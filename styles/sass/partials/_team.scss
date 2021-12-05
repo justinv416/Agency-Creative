@@ -1,17 +1,31 @@
 .team {
     background: $white;
+    position: relative;
+
+    .line {
+        width: 1px;
+        height: 60px;
+        background: $black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 3;
+    }
 
     h3 {
+        text-transform: uppercase;
         text-align: center;
+        padding-top: 100px;
     }
 
     &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 100px 0 200px 0;
 
         &--description {
-            max-width: 540px;
+            width: calc(540px + 20px);
             height: 270px;
             background: $offWhite;
             display: flex;

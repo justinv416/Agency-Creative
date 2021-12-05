@@ -1,23 +1,39 @@
 .footer {
     background: $black;
     color: $offWhite;
+    h5 {
+        text-transform: uppercase;
+    }
 
     .wrapper {
         display: flex;
         padding: 200px 0;
-        align-items: center;
-        justify-content: space-evenly;
+        // align-items: center;
+        justify-content: space-between;
     }
 
     &__contact {
         ul {
-            margin: 20px 0;
+            margin: 40px 0 20px 0;
         }
     }
 
+    &__sm  i:nth-of-type(2) {
+        margin: 0 20px;
+    }
+
     &__posts {
+        h5 {
+            text-align: center;
+        }
+
         ul {
-            margin: 20px 0;
+            margin: 40px 0 0 0;
+            line-height: 30px;
+        }
+
+        li {
+            list-style-type: disc;
         }
     }
 
@@ -26,5 +42,24 @@
         padding: 50px 0;
         border-top: 1px solid $offWhite;
     }   
+
+    &__form { 
+        text-align: end;
+
+        input[type="email"] {
+            padding: 10px;
+        }
+
+        button {
+            background: $lightSage;
+            border: none;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 40px 0 20px 0;
+        }
+    }
 }
 
