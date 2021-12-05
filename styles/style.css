@@ -559,18 +559,19 @@ a {
   padding: 100px 0 0 0;
 }
 .article__content p:nth-of-type(2) {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .article__content p:nth-of-type(3) {
-  padding: 0 0 50px 0;
+  padding: 0 0 30px 0;
 }
 .article__content p:nth-of-type(4) {
-  padding: 0 0 50px 0;
+  padding: 0 0 30px 0;
 }
 .article__sm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 0 30px 0;
 }
 .article__sm p {
   margin-right: 20px;
@@ -579,13 +580,47 @@ a {
   margin: 0 20px;
 }
 
-.posts {
+.posts h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  padding: 50px 0;
+  position: relative;
+}
+.posts h2:after {
+  content: "";
+  height: 1px;
+  background: #999;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  left: 0;
+}
+.posts__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.posts__post {
+  text-transform: uppercase;
+}
+
+.comments h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 100px 0 0 0;
+  position: relative;
+}
+.comments h2:after {
+  content: "";
+  height: 1px;
+  background: #999;
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
 }
 
 .comment {
@@ -600,6 +635,47 @@ a {
 .comment__container {
   background: #F6F6F6;
   padding: 20px;
+}
+.comment .comment__name {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.comment .comment__name span {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #999;
+}
+.comment .comment__text {
+  padding: 10px 0;
+}
+.comment .comment__date {
+  color: #999;
+}
+
+.comment__form h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  padding: 50px 0;
+  position: relative;
+}
+.comment__form h2:after {
+  content: "";
+  height: 1px;
+  background: #999;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  left: 0;
+}
+
+#comment__form--name, #comment__form--email, #comment__form--subject {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #999;
+}
+#comment__form textarea {
+  display: block;
 }
 
 .wrapper {

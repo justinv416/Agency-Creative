@@ -107,10 +107,10 @@
         </div>
     </article>
 
-    <section id="posts">
+    <section id="posts" class="posts">
         <div class="wrapper">
             <h2>Related Posts</h2>
-            <div class="posts">
+            <div class="posts__container">
                 <div class="posts__post">
                     <img src="./assets/blog-3.jpeg" alt="">
                     <p>July, 25, 2018</p>
@@ -127,18 +127,18 @@
         </div>
     </section>
 
-    <section id="comments">
+    <section id="comments" class="comments">
         <div class="wrapper">
             <h2>02 Comments</h2>
             <div class="comment">
-                <div class="">
+                <div class="comment__image">
                     <img src="./assets/blog-6.jpeg" alt="">
                 </div>
                 <div class="comment__container">
-                    <h3 class="comment__container--name">Daniel Vandaft <span><a href="#"> - reply</a></span></h3>
-                    <p class="comment__container--text">Ecosystem iPad disruptive social media low hanging fruit stealth launch
+                    <h3 class="comment__name">Daniel Vandaft <span><a href="#"> - reply</a></span></h3>
+                    <p class="comment__text">Ecosystem iPad disruptive social media low hanging fruit stealth launch
                         party handshake market branding.</p>
-                    <p class="comment__container--date">Jul 17, 2015 at 15 hours ago</p>
+                    <p class="comment__date">Jul 17, 2015 at 15 hours ago</p>
                 </div>
             </div>
             <div class="comment">
@@ -146,23 +146,23 @@
                     <img src="./assets/blog-7.jpeg" alt="">
                 </div>
                 <div class="comment__container">
-                    <h3 class="comment__container--name">Daniel Vandaft <span><a href="#"> - reply</a></span></h3>
-                    <p class="comment__container--text">Pitch agile development business plan stelth channels prototype mass market
+                    <h3 class="comment__name">Daniel Vandaft <span><a href="#"> - reply</a></span></h3>
+                    <p class="comment__text">Pitch agile development business plan stelth channels prototype mass market
                         product management value proposition startup strategy.</p>
-                    <p class="comment__container--date">Jul 17, 2015 at 15 hours ago</p>
+                    <p class="comment__date">Jul 17, 2015 at 15 hours ago</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="comment-form">
+    <section id="comment__form" class="comment__form">
         <div class="wrapper">
             <h2>Leave a comment</h2>
             <form action="">
-                <input type="text" placeholder="Enter your name" required>
-                <input type="email" name="" id="" placeholder="Enter your email" required>
-                <input type="text" placeholder="Subject (optional)">
-                <input type="text">
+                <input type="text" id="comment__form--name" placeholder="Enter your name..." required>
+                <input type="email" name="" id="comment__form--email" placeholder="Enter your email" required>
+                <input type="text" id="comment__form--subject" placeholder="Subject (optional)">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
