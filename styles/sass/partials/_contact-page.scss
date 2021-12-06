@@ -1,16 +1,8 @@
-.wrapper {
-    width: 70%;
-}
 
 .contact {
 
     p {
         color: $lightGrey;
-    }
-
-    &__image {
-        width: 100%;
-        display: block;
     }
 
     &__touch {
@@ -78,6 +70,11 @@ header {
 }
 
 .contact__title {
+    &--image {
+        width: 100%;
+        display: block;
+    }
+
     &--details {
         width: 50%;
 

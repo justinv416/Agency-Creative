@@ -1,3 +1,4 @@
+
 .team {
     background: $white;
     position: relative;
@@ -21,27 +22,33 @@
     &__container {
     display: flex;
     flex-wrap: wrap;
+    background: aquamarine;
     justify-content: center;
     padding: 100px 0 200px 0;
 
+        img {
+            margin: 10px;
+        }
+
         &--description {
-            width: calc(100% / 3 - 20px);
+            width: calc(100% / 2 - 35px);
             height: 270px;
             background: $offWhite;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 50px;
-            margin: 0 0 20px 0;
+            margin: 10px;
             h4 {
                 margin-bottom: 20px;
             }
         }
 
         &--join {
+            background: $white;
             text-transform: uppercase;
-            width: 100%;
-            max-width: 270px;
+            width: calc((100% / 4) - 50px);
+            margin: 10px;
             height: 270px;
             display: flex;
             align-items: center;
