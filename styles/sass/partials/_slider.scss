@@ -9,6 +9,10 @@
         margin: auto;
         font-style: italic;
         line-height: 30px;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
     }
 
     .wrapper {
@@ -26,6 +30,9 @@
     .fa-angle-left, .fa-angle-right {
         font-size: 2.5rem;
         margin-bottom: 50px;
+        @media (max-width: 720px) {
+            font-size: 2rem;
+        }
     }
 
     .fa-angle-left:hover, .fa-angle-right:hover {
