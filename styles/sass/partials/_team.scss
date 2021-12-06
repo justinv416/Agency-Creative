@@ -25,13 +25,14 @@
     padding: 100px 0 200px 0;
 
         &--description {
-            width: calc(540px + 20px);
+            width: calc(100% / 3 - 20px);
             height: 270px;
             background: $offWhite;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 50px;
+            margin: 0 0 20px 0;
             h4 {
                 margin-bottom: 20px;
             }

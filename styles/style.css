@@ -132,38 +132,24 @@ a {
 .branding {
   background: #C3DAB7;
 }
-.branding__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  background: blueviolet;
-  margin: auto;
-  width: 100%;
-  max-width: 40%;
-}
 .branding__image {
+  width: 30%;
   position: relative;
-  width: 100%;
-  padding: 100px;
+  margin: 0 auto;
+  padding: 200px 0 100px 0;
 }
 .branding__image--top {
-  position: relative;
-  width: 50%;
+  position: absolute;
   z-index: 1;
-  top: -100px;
+  width: 50%;
+  top: 100px;
   left: -100px;
 }
 .branding__image--top img {
   width: 100%;
 }
 .branding__image--bottom {
-  position: absolute;
-  width: 100%;
-  top: 0;
+  position: relative;
 }
 .branding__image--bottom img {
   width: 100%;
@@ -176,6 +162,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  padding-bottom: 100px;
 }
 .branding__content--left, .branding__content--right {
   font-family: "Montserrat", sans-serif;
@@ -192,22 +179,6 @@ a {
 .branding__content--left p, .branding__content--right p {
   font-size: 0.8rem;
   line-height: 30px;
-}
-
-.image-container-2 {
-  background-color: chocolate;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 500px;
-}
-
-.home-img-2 {
-  width: 20%;
-}
-
-.circle-img-2 {
-  width: 20%;
 }
 
 #slider {
@@ -351,7 +322,7 @@ a {
   padding: 100px 0 200px 0;
 }
 .team__container--description {
-  width: calc(540px + 20px);
+  width: calc(100% / 3 - 20px);
   height: 270px;
   background: #F6F6F6;
   display: -webkit-box;
@@ -365,6 +336,7 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 50px;
+  margin: 0 0 20px 0;
 }
 .team__container--description h4 {
   margin-bottom: 20px;
