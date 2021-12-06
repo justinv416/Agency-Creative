@@ -1,8 +1,10 @@
-@import './partials/variables', './partials/global', 
-'./partials/header', './partials/navigation', './partials/utilities',
+@import './components/variables', './components/utilities', './components/navigation', 
+'./components/header', './components/footer', './components/form';
+@import './partials/global',
 './partials/branding', './partials/slider.scss', './partials/features',
-'./partials/team', './partials/contact', './partials/footer', './partials/blog',
-'./partials/contact-page', './partials/form', './partials/mixins';
+'./partials/team', './partials/contact', './partials/blog',
+'./partials/contact-page';
+
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
