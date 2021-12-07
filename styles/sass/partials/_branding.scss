@@ -1,5 +1,15 @@
 .branding {
     background: $lightSage;
+    position: relative;
+
+    &__line {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      width: 1px;
+      height: 150px;
+      background: $lightGrey;
+    }
 
     &__image {
        width: 30%;

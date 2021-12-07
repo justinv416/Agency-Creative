@@ -239,6 +239,7 @@ template {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 body p, ul, label {
@@ -371,6 +372,7 @@ a {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
 }
 @media (max-width: 400px) {
   #header-main {
@@ -611,6 +613,15 @@ a {
 }
 .branding {
   background: #C3DAB7;
+  position: relative;
+}
+.branding__line {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  width: 1px;
+  height: 150px;
+  background: #999;
 }
 .branding__image {
   width: 30%;
@@ -789,7 +800,7 @@ a {
 .team .line {
   width: 1px;
   height: 60px;
-  background: #333;
+  background: #999;
   position: absolute;
   top: 0;
   left: 50%;
