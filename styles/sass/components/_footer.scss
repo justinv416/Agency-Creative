@@ -8,16 +8,11 @@
     .wrapper {
         display: flex;
         padding: 200px 0;
+        @media (max-width: 900px) {
+            padding: 0;
+        }
         // align-items: center;
         justify-content: space-between;
-        @media (max-width: 1600px) {
-            width: 80%;
-        }
-
-        @media (max-width: 1400px) {
-            width: 90%;
-        }
-
         @media (max-width: 900px) {
             width: 100%;
             flex-direction: column;
@@ -26,8 +21,27 @@
     }
 
     &__contact {
+        @media (max-width: 900px) {
+            padding: 50px 0;
+        }
         ul {
             margin: 40px 0 20px 0;
+            @media (max-width: 900px) {
+                text-align: center;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width:900px) {
+            h5 {
+                text-align: center;
+            }
+        }
+    }
+
+    &__sm {
+        @media (max-width: 900px) {
+            @include flexIt(row, center, center)
         }
     }
 
@@ -36,17 +50,28 @@
     }
 
     &__posts {
+        @media (max-width: 900px) {
+            padding: 0 0 50px 0;
+        }
+
         h5 {
             text-align: center;
         }
 
         ul {
-            margin: 40px 0 0 0;
+            margin-top: 40px;
             line-height: 30px;
+            @media (max-width: 900px) {
+                margin-top: 20px;
+                text-align: center;
+            }
         }
 
         li {
             list-style-type: disc;
+             @media (max-width: 900px) {
+                list-style: none;
+            }
         }
     }
 
@@ -58,9 +83,19 @@
 
     &__form { 
         text-align: end;
+        @media (max-width: 900px) {
+            width: 80%;
+            padding-bottom: 40px;
+        }
+        @media (max-width: 900px) {
+            text-align: center;
+        }
 
         input[type="email"] {
             padding: 10px;
+            @media (max-width: 900px) {
+                width: 80%;
+            }
         }
 
         button {
@@ -72,6 +107,9 @@
         label {
             display: block;
             margin: 40px 0 20px 0;
+            @media (max-width: 900px) {
+                margin: 20px 0;
+            }
         }
     }
 }

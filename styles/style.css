@@ -396,14 +396,9 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 1600px) {
+@media (max-width: 900px) {
   .footer .wrapper {
-    width: 80%;
-  }
-}
-@media (max-width: 1400px) {
-  .footer .wrapper {
-    width: 90%;
+    padding: 0;
   }
 }
 @media (max-width: 900px) {
@@ -418,21 +413,70 @@ a {
             align-items: center;
   }
 }
+@media (max-width: 900px) {
+  .footer__contact {
+    padding: 50px 0;
+  }
+}
 .footer__contact ul {
   margin: 40px 0 20px 0;
 }
+@media (max-width: 900px) {
+  .footer__contact ul {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 900px) {
+  .footer__contact h5 {
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .footer__sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .footer__sm i:nth-of-type(2) {
   margin: 0 20px;
+}
+@media (max-width: 900px) {
+  .footer__posts {
+    padding: 0 0 50px 0;
+  }
 }
 .footer__posts h5 {
   text-align: center;
 }
 .footer__posts ul {
-  margin: 40px 0 0 0;
+  margin-top: 40px;
   line-height: 30px;
+}
+@media (max-width: 900px) {
+  .footer__posts ul {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 .footer__posts li {
   list-style-type: disc;
+}
+@media (max-width: 900px) {
+  .footer__posts li {
+    list-style: none;
+  }
 }
 .footer__logo {
   text-align: center;
@@ -442,8 +486,24 @@ a {
 .footer__form {
   text-align: end;
 }
+@media (max-width: 900px) {
+  .footer__form {
+    width: 80%;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 900px) {
+  .footer__form {
+    text-align: center;
+  }
+}
 .footer__form input[type=email] {
   padding: 10px;
+}
+@media (max-width: 900px) {
+  .footer__form input[type=email] {
+    width: 80%;
+  }
 }
 .footer__form button {
   background: #C3DAB7;
@@ -453,6 +513,11 @@ a {
 .footer__form label {
   display: block;
   margin: 40px 0 20px 0;
+}
+@media (max-width: 900px) {
+  .footer__form label {
+    margin: 20px 0;
+  }
 }
 
 #comment__form {
