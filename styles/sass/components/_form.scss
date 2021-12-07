@@ -25,13 +25,24 @@
         border-bottom: 1px solid $lightGrey;
         padding: 0 0 10px 0;
         width: 32%;
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    &--email {
+        @media (max-width: 900px) {
+            margin: 40px 0;
+        }
     }
 }
 
 .comment__form {
     &--container {
-        display: flex;
-        justify-content: space-between;
+        @include flexIt(row, space-between, stretch);
+        @media (max-width: 900px) {
+            @include flexIt(column, space-between, stretch);
+        }
     }
 
     textarea {
@@ -49,5 +60,8 @@
         border-bottom: 1px solid $black;
         text-transform: uppercase;
         padding-bottom: 5px;
+        @media (max-width: 900px) {
+            
+        }
     }
 }

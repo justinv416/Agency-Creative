@@ -1,14 +1,17 @@
 
 .article {
-    .wrapper {
-        width: 70%;
-    }
-
-    // background: coral;
     font-family: $openSans;
+    @media (max-width: 400px) {
+        p {
+            text-align: center;
+        }
+    }    
 
      &__link {
         margin: 20px 0 100px 0;
+        @media (max-width: 900px) {
+            text-align: center;
+        }
 
         a {
             color: $lightGrey;
@@ -16,16 +19,28 @@
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
+        @include flexIt(row, space-between, stretch);
         position: relative;
+        @media (max-width: 1200px) {
+            @include flexIt(column, center, flex-start);
+        }
     }
 
     h2 {
         padding: 100px 0 0 0;
+        text-transform: uppercase;
+        font-family: $montserrat;
+        font-size: 3.5rem;
+        font-weight: bold;
+        @media (max-width: 900px) {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        @media (max-width: 400px) {
+            text-align: center;
+            font-size: 2rem;
+        }
     }
-
-    
 
     &__container::after {
         content: "";
@@ -42,8 +57,13 @@
     }
 
     &__author {
-        display: flex;
-        align-items: center;
+        @include flexIt(row, flex-start, center);
+        @media (max-width: 1200px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 600px) {
+            justify-content: center;
+        }
 
         img {
             border-radius: 50%;
@@ -70,20 +90,9 @@
 
     &__information {
         display: flex;
-        align-items: center;
-
-        
-
-           
+        align-items: center;       
 
        
-    }
-
-       h2 {
-        text-transform: uppercase;
-        font-family: $montserrat;
-        font-size: 3.5rem;
-        font-weight: bold;
     }
 
     &__content {
@@ -129,12 +138,24 @@
 
  
 .posts {
+    @media(max-width: 900px) {
+        p {
+            text-align: center;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
     
     h2 {
         text-transform: uppercase;
         font-family: $montserrat;
         padding: 50px 0;
         position: relative;
+        @media (max-width: 900px) {
+            text-align: center;
+        }
     }
 
     h2:after {
@@ -150,6 +171,9 @@
     &__container {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 900px) {
+            @include flexIt(column, center, center)
+        }
     }
 
     &__post {
@@ -164,6 +188,9 @@
         text-transform: uppercase;
         padding: 100px 0 0 0;
         position: relative;
+        @media (max-width: 900px) {
+            text-align: center;
+        }
     }
 
     h2:after {
