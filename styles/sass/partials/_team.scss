@@ -130,14 +130,15 @@
         }
 
         &--join {
+            @include flexIt(row, center, center);
             background: $white;
             text-transform: uppercase;
             grid-column: 4 / 5;
             grid-row: 2 / 2;
-            @include flexIt(row, center, center);
             font-family: $openSans;
             padding: 50px;
             text-align: center;
+            transition: all 0.3s ease-out;
             @media(max-width: 1400px) {
                 grid-column: 3 / 4;
                 grid-row: 3 / 3;
@@ -147,6 +148,11 @@
                 grid-column: 2 / 3;
                 grid-row: 4 / 4;
             }
+
+            &:hover {
+                background: $black;
+                color: $offWhite;
+            } 
         }
     }
 }
