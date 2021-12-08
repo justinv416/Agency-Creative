@@ -4,11 +4,11 @@
     background-size: cover;
     display: flex;
     justify-content: flex-end;
-    height: 100vh;
 
     &__container {
         @include flexIt(column, center, flex-end);
         width: 60%;
+        padding: 200px 0 200px 0;
         @media (max-width: 1200px) {
             background: rgba(255, 255, 255, 0.9);
             width: 100%;
@@ -24,10 +24,16 @@
                 flex-direction: column;
                 padding: 50px 0;
             }
+            @media (max-width: 700px) {
+                padding: 0;
+            }
         }
 
         &--content {
             display: flex;
+            @media (max-width: 700px) {
+                padding: 20px;
+            }
         }
 
         &--icon {
@@ -52,6 +58,7 @@
                 font-family: $montserrat;
                 color: $black;
                 font-weight: normal;
+                font-size: 1rem;
                 margin-bottom: 10px;
                 letter-spacing: 0.3px;
             }
