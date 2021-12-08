@@ -49,17 +49,22 @@
 
     &__list .fa-shopping-bag {
         position: relative;
+        font-size: 1rem;
     }
 
     &__list .fa-shopping-bag::after {
         content: "2";
+        font-family: $openSans;
+        font-size: .7rem;
         height: 100%;
         width: 100%;
         border-radius: 50%;
         background: $lightSage;
         position: absolute;
-        bottom: -10px;
-        right: -10px;
+        bottom: -15px;
+        right: -15px;
+        padding: 2px;
+        text-align: center;
     }
 
     &__logo {

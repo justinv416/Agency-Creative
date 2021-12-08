@@ -344,16 +344,21 @@ a {
 }
 .navigation__list .fa-shopping-bag {
   position: relative;
+  font-size: 1rem;
 }
 .navigation__list .fa-shopping-bag::after {
   content: "2";
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
   height: 100%;
   width: 100%;
   border-radius: 50%;
   background: #C3DAB7;
   position: absolute;
-  bottom: -10px;
-  right: -10px;
+  bottom: -15px;
+  right: -15px;
+  padding: 2px;
+  text-align: center;
 }
 .navigation__logo {
   font-size: 2rem;
