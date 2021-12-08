@@ -1,21 +1,29 @@
 .features {
     background: url(../assets/home-4.jpeg) no-repeat;
+    background-blend-mode: darken;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
     height: 100vh;
 
     &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
+        @include flexIt(column, center, flex-end);
         width: 60%;
+        @media (max-width: 1200px) {
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            @include flexIt(column, center, center);
+        }
 
         &--inner {
+            // background: blanchedalmond;
             display: flex;
-            width: 90%;
+            width: 80%;
             padding: 40px 0;
+            @media (max-width: 900px) {
+                flex-direction: column;
+                padding: 50px 0;
+            }
         }
 
         &--content {
@@ -28,8 +36,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 110px;
-            height: 60px;
+            width: 30%;
+            height: 60%;
             margin-right: 30px;
 
             i {
@@ -51,9 +59,12 @@
             p {
                 font-family: $openSans;
                 color: $lightGrey;
-                width: 80%;
+                max-width: 90%;
                 line-height: 30px;
                 font-size: 0.8rem;
+                @media (max-width: 1200px) {
+                    color: $black;
+                }
             }
         }
     }
