@@ -1,11 +1,11 @@
 
 .article {
     font-family: $openSans;
-    @media (max-width: 400px) {
-        p {
-            text-align: center;
-        }
-    }    
+    // @media (max-width: 400px) {
+    //     p {
+    //         text-align: center;
+    //     }
+    // }    
 
      &__link {
         margin: 20px 0 100px 0;
@@ -22,7 +22,7 @@
         @include flexIt(row, space-between, stretch);
         position: relative;
         @media (max-width: 1200px) {
-            @include flexIt(column, center, flex-start);
+            @include flexIt(column, center, center);
         }
     }
 
@@ -65,14 +65,29 @@
             justify-content: center;
         }
 
+        @media (max-width: 500px) {
+            @include flexIt(column, center, center);
+            margin-bottom: 0;;
+        }
+
         img {
             border-radius: 50%;
             margin-right: 40px;
+
+            @media (max-width: 500px) {
+                margin: 0;
+            }
+        }
+
+        &--info {
+             @media (max-width: 500px) {
+                padding: 20px 0;
+            }
         }
 
         &--info p {
             font-weight: normal;
-            color: $lightGrey;        
+            color: $lightGrey;    
         }
     }
 
@@ -83,20 +98,23 @@
    
      &__category {
             margin: 0 50px;
+            @media (max-width: 500px) {
+                margin: 20px 0;
+            }
             p {
                 color: $lightGrey;
             }
         }
 
     &__information {
-        display: flex;
-        align-items: center;       
-
-       
+        @include flexIt (row, flex-start, center);      
+        @media (max-width: 500px) {
+            @include flexIt(column, flex-start, stretch);
+            text-align: center;
+        }
     }
 
     &__content {
-        // background: chocolate;
         p {
             color: $lightGrey;
         }
@@ -128,7 +146,6 @@
         }
 
         .icons {
-            // background: crimson;
             .fa-twitter {
                 margin: 0 20px;
             }
@@ -208,6 +225,10 @@
     display: flex;
     margin: 50px 0;
 
+    @media (max-width: 400px) {
+        @include flexIt(column, flex-start, stretch)
+    }
+
 
     img {
             margin-right: 50px ;
@@ -215,7 +236,12 @@
 
     &__container {
         background: $offWhite;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
+        width: 100%;
+        
+        @media(max-width: 400px) {
+            margin: 20px 0;
+        }
     }
 
     .comment {

@@ -6,6 +6,9 @@
         font-family: $montserrat;
         padding: 0 0 50px 0;
         position: relative;
+        @media (max-width: 900px) {
+            text-align: center;
+        }
     }
 
     h2:after {
