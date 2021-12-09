@@ -7,31 +7,41 @@
     &__container {
         @include flexIt(column, center, flex-end);
         width: 60%;
-        padding: 200px 0 200px 0;
+        padding: 200px 0;
         @media (max-width: 1200px) {
             background: rgba(255, 255, 255, 0.9);
             width: 100%;
             @include flexIt(column, center, center);
         }
 
+        @media (max-width: 900px) {
+            padding: 100px 0;
+        }
+
+        @media (max-width: 900px) {
+            padding: 100px 0 50px 0;
+        }
+
+
         &--inner {
-            // background: blanchedalmond;
             display: flex;
             width: 80%;
             padding: 40px 0;
             @media (max-width: 900px) {
                 flex-direction: column;
-                padding: 50px 0;
-            }
-            @media (max-width: 700px) {
                 padding: 0;
             }
         }
 
         &--content {
             display: flex;
-            @media (max-width: 700px) {
+            @media (max-width: 900px) {
                 padding: 20px;
+            }
+
+            @media (max-width: 500px) {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -41,9 +51,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30%;
-            height: 60%;
+            width: 100px;
+            height: 50px;
             margin-right: 30px;
+            padding: 30px 10px;
+
+            @media (max-width: 500px) {
+                width: 70px;
+                margin-right: 0;
+            }
 
             i {
                 font-size: 1.5rem;
@@ -51,6 +67,11 @@
         }
 
         &--copy {
+
+            @media (max-width: 500px) {
+                text-align: center;
+                padding: 20px 0;
+            }
             
             h3 {
                 text-transform: uppercase;
@@ -65,11 +86,15 @@
             p {
                 font-family: $openSans;
                 color: $lightGrey;
-                max-width: 90%;
+                width: 90%;
                 line-height: 30px;
                 font-size: 0.8rem;
                 @media (max-width: 1200px) {
                     color: $black;
+                }
+
+                @media (max-width: 500px) {
+                    width: 100%;
                 }
             }
         }
