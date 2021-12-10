@@ -1,9 +1,10 @@
+//Parent section. 
 #comment__form {
     padding: 200px 0;
 
     h2 {
+        font-weight: bold;
         text-transform: uppercase;
-        font-family: $montserrat;
         padding: 0 0 50px 0;
         position: relative;
         @media (max-width: 900px) {
@@ -21,16 +22,23 @@
         left: 0;
     }
 
-     &--name, &--email, &--subject {
+    //input types.
+    input, input:focus  {
         border-top-style: none;
         border-left-style: none;
         border-right-style: none;
         border-bottom: 1px solid $lightGrey;
         padding: 0 0 10px 0;
         width: 32%;
+        
         @media (max-width: 900px) {
             width: 100%;
         }
+    }
+
+    input:focus {
+        outline: none;
+        border-bottom: 2px solid $black;
     }
 
     &--email {
@@ -40,9 +48,11 @@
     }
 }
 
+//Comment textarea.
 .comment__form {
     &--container {
         @include flexIt(row, space-between, stretch);
+        
         @media (max-width: 900px) {
             @include flexIt(column, space-between, stretch);
         }
@@ -57,12 +67,22 @@
         resize: none;
     }
 
+    textarea, textarea:focus {
+        width: 100%;
+    }
+
+    textarea:focus {
+        outline: none;
+        border-bottom: 2px solid $black;
+    }
+
     &--button {
         background: none;
         border-style: none;
-        border-bottom: 1px solid $black;
+        border-bottom: 2px solid $black;
         text-transform: uppercase;
         padding-bottom: 5px;
+        
         @media (max-width: 900px) {
             
         }

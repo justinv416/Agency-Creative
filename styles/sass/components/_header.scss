@@ -1,20 +1,23 @@
-
+//Header for the home page.
 #header-main {
     background: url(../assets/home-1.jpeg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     position: relative;
+    
     @media (max-width: 400px) {
       height: 90vh;
     }
 }
 
+//Header for blog page.
 #header__blog {
   background: url(../assets/blog-1.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
+  
   @media (max-width: 1000px) {
     height: 80vh;
   }  

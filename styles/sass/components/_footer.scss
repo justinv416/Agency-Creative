@@ -1,46 +1,53 @@
+//Parent footer section.
 .footer {
     background: $black;
     color: $offWhite;
+
     h5 {
         text-transform: uppercase;
     }
 
     .wrapper {
-        display: flex;
+        @include flexIt(row, space-between, stretch);
         padding: 200px 0;
+        
         @media (max-width: 900px) {
             padding: 0;
         }
-        // align-items: center;
-        justify-content: space-between;
-        @media (max-width: 900px) {
+
+        @media (max-width: 1100px) {
             width: 100%;
             flex-direction: column;
             align-items: center;
         }
     }
 
+    //Contact list.
     &__contact {
-        @media (max-width: 900px) {
+        
+        @media (max-width: 1100px) {
             padding: 50px 0;
         }
+
         ul {
             margin: 40px 0 20px 0;
-            @media (max-width: 900px) {
+            
+            @media (max-width: 1100px) {
                 text-align: center;
                 margin: 20px 0;
             }
         }
 
-        @media (max-width:900px) {
+        @media (max-width:1100px) {
             h5 {
                 text-align: center;
             }
         }
     }
 
+    //Social media icons.
     &__sm {
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
             @include flexIt(row, center, center)
         }
     }
@@ -49,8 +56,9 @@
         margin: 0 20px;
     }
 
+    //Recent posts.
     &__posts {
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
             padding: 0 0 50px 0;
         }
 
@@ -61,7 +69,7 @@
         ul {
             margin-top: 40px;
             line-height: 30px;
-            @media (max-width: 900px) {
+            @media (max-width: 1100px) {
                 margin-top: 20px;
                 text-align: center;
             }
@@ -75,39 +83,43 @@
         }
     }
 
+    //Logo at the bottom.
     &__logo {
         text-align: center;
         padding: 50px 0;
-        border-top: 1px solid $offWhite;
+        border-top: 1px solid rgba(246, 246, 246, 0.2);
     }   
 
+    //Email form
     &__form { 
         text-align: end;
-        @media (max-width: 900px) {
+        
+        @media (max-width: 1100px) {
             width: 80%;
             padding-bottom: 40px;
-        }
-        @media (max-width: 900px) {
             text-align: center;
         }
 
-        input[type="email"] {
+        input[type="email"],
+        input[type="email"]:focus {
             padding: 10px;
-            @media (max-width: 900px) {
+           
+            @media (max-width: 1100px) {
                 width: 80%;
             }
         }
 
         button {
             background: $lightSage;
-            border: none;
-            padding: 10px;
+            border: 0;
+            padding: 12px; 
         }
 
         label {
             display: block;
             margin: 40px 0 20px 0;
-            @media (max-width: 900px) {
+            
+            @media (max-width: 1100px) {
                 margin: 20px 0;
             }
         }

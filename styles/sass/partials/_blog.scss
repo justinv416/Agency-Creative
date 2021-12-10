@@ -1,26 +1,25 @@
-
+//Parent aritcle element.
 .article {
-    font-family: $openSans;
-    // @media (max-width: 400px) {
-    //     p {
-    //         text-align: center;
-    //     }
-    // }    
 
+    //Slight navigational links beneath main heading.
      &__link {
         margin: 20px 0 100px 0;
+        
         @media (max-width: 900px) {
             text-align: center;
         }
 
         a {
             color: $lightGrey;
+            position: relative;
         }
     }
 
+    //'Contains' article information.
     &__container {
         @include flexIt(row, space-between, stretch);
         position: relative;
+        
         @media (max-width: 1200px) {
             @include flexIt(column, center, center);
         }
@@ -29,19 +28,26 @@
     h2 {
         padding: 100px 0 0 0;
         text-transform: uppercase;
-        font-family: $montserrat;
         font-size: 3.5rem;
         font-weight: bold;
+        
         @media (max-width: 900px) {
             text-align: center;
             font-size: 2.5rem;
         }
+        
         @media (max-width: 400px) {
             text-align: center;
             font-size: 2rem;
         }
     }
 
+     h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    //Border line beneath article information.
     &__container::after {
         content: "";
         position: absolute;
@@ -51,16 +57,24 @@
         bottom: -50px;
     }
 
-    h3 {
-        text-transform: uppercase;
-        font-weight: normal;
+    //Article information.
+    &__information {
+        @include flexIt(row, flex-start, center);      
+        
+        @media (max-width: 500px) {
+            @include flexIt(column, flex-start, stretch);
+            text-align: center;
+        }
     }
 
+    //Author information
     &__author {
         @include flexIt(row, flex-start, center);
+       
         @media (max-width: 1200px) {
             margin-bottom: 50px;
         }
+
         @media (max-width: 600px) {
             justify-content: center;
         }
@@ -91,29 +105,26 @@
         }
     }
 
+    //Article date information.
     &__date p, 
     &__tags p {
         color: $lightGrey;
     }
    
-     &__category {
-            margin: 0 50px;
-            @media (max-width: 500px) {
-                margin: 20px 0;
-            }
-            p {
-                color: $lightGrey;
-            }
+    //Article category.
+    &__category {
+        margin: 0 50px;
+
+        @media (max-width: 500px) {
+            margin: 20px 0;
         }
 
-    &__information {
-        @include flexIt (row, flex-start, center);      
-        @media (max-width: 500px) {
-            @include flexIt(column, flex-start, stretch);
-            text-align: center;
+        p {
+            color: $lightGrey;
         }
     }
 
+    //Article content.
     &__content {
         p {
             color: $lightGrey;
@@ -138,10 +149,13 @@
         }
     }
 
+    //'Share' and social media icons. 
     &__sm {
         display: flex;
         padding: 0 0 30px 0;
+        
         p {
+            text-transform: uppercase;
             margin-right: 20px;
         }
 
@@ -153,7 +167,7 @@
     }
 }
 
- 
+//Posts section. 
 .posts {
     @media(max-width: 900px) {
         p {
@@ -167,14 +181,16 @@
     
     h2 {
         text-transform: uppercase;
-        font-family: $montserrat;
         padding: 50px 0;
         position: relative;
+        font-weight: bold;
+        
         @media (max-width: 900px) {
             text-align: center;
         }
     }
 
+    //Heading border.
     h2:after {
         content: '';
         height: 1px;
@@ -185,6 +201,7 @@
         left: 0;
     }
 
+    //'Contains' images.
     &__container {
         display: flex;
         justify-content: space-between;
@@ -193,15 +210,21 @@
         }
     }
 
+    //Post container.
     &__post {
         text-transform: uppercase;
+
+        p {
+            padding: 10px 0;   
+        }
     }
 
 }
 
+//Comments section/parent container.
 .comments {
     h2 {
-        font-family: $montserrat;
+        font-weight: bold;
         text-transform: uppercase;
         padding: 100px 0 0 0;
         position: relative;
@@ -210,6 +233,7 @@
         }
     }
 
+    //Border for comments heading.
     h2:after {
         content: '';
         height: 1px;
@@ -221,48 +245,52 @@
     }
 }
 
+//Comment element that contains text and comment author.
 .comment {
     display: flex;
     margin: 50px 0;
-
     @media (max-width: 400px) {
         @include flexIt(column, flex-start, stretch)
     }
-
 
     img {
             margin-right: 50px ;
     }
 
+    //name of commenter.
+     &__name {
+        text-transform: uppercase;
+        font-size: 1rem;
+            
+        span {
+            font-style: italic;
+            font-size: .8rem;
+            color: $lightGrey;
+        }
+    }
+    
+    //comment text.
+     &__text {
+        padding: 10px 0;
+    }
+
+    //Comment date.
+    &__date {
+         color: $lightGrey;
+    }
+
+    //Comment box.
     &__container {
         background: $offWhite;
         padding: 20px 20px 40px 20px;
         width: 100%;
+
+        h3 {
+            font-weight: normal;
+        }
         
         @media(max-width: 400px) {
             margin: 20px 0;
-        }
-    }
-
-    .comment {
-
-        &__name {
-            text-transform: uppercase;
-            font-size: 1rem;
-
-            span {
-                font-style: italic;
-                font-size: .8rem;
-                color: $lightGrey;
-            }
-        }
-
-        &__text {
-            padding: 10px 0;
-        }
-
-        &__date {
-            color: $lightGrey;
         }
     }
 }

@@ -1,15 +1,73 @@
-
+//Contact section parent element. 
 .contact {
+    p {
+        color: $lightGrey;
+    }
 
+    //Contains the entire section
+    &__container {
+            position: relative;
+    
+        h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-family: $montserrat;
+            position: relative;
+            font-weight: bold;
+            top:  -100px;
+            left: 0;
+
+            @media (max-width: 1200px) {
+                top: 0;
+            }
+        
+            @media (max-width: 400px) {
+                font-size: 2rem;
+            }
+        
+            span {
+                display: block;
+            }
+        }
+    
+        h2::before {
+            content: '';
+            height: 5px;
+            width: 50px;
+            position: absolute;
+            top: -20px;
+            background: $black;
+        }
+    
+        h3 {
+            text-transform: uppercase;
+            font-family: $montserrat;
+            font-weight: bold;
+        }
+    }
+    
+    //Contact details container.
+    &__details {
+        width: 50%;
+        
+        @media (max-width: 1200px) {
+            width: 100%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+
+    //Images for the page.
     &__image {
         width: 100%;
         display: block;
     }
 
-    p {
-        color: $lightGrey;
-    }
-
+    //'Get in touch with us' text.
     &__touch {
         @media (max-width: 1200px) {
             text-align: center;
@@ -20,10 +78,12 @@
         }
     }
 
+    //'Contact details' container.
     &__icons {
         display: flex;
         padding: 100px 50px;
         justify-content: space-evenly;
+
         @media (max-width: 1400px) {
             padding: 0;
             align-items: center;
@@ -35,6 +95,7 @@
             @include flexIt (column, space-evenly, center);
         }
         
+        //Individual contact item.
         &--item {
             @media (max-width: 1200px) {
                 text-align: center;
@@ -53,6 +114,7 @@
             }
         }
 
+        //Vertical border dividers.
         &--item:nth-of-type(2) {
             position: relative;
             @media (max-width: 1400px) {
@@ -88,71 +150,3 @@
     }
 }
 
-header {
-    
-    .navigation-contact {
-        background: $white;
-        display: flex;
-        width: 100%;
-    }
-
-}
-
-.contact__title {
-    &--image {
-        width: 100%;
-        display: block;
-    }
-
-    &--details {
-        width: 50%;
-        @media (max-width: 1200px) {
-            width: 100%;
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        h3 {
-            margin-bottom: 20px;
-        }
-    } 
-}
-
-.contact__container {
-    position: relative;
-
-    h2 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: $montserrat;
-        position: relative;
-        top:  -100px;
-        left: 0;
-        @media (max-width: 1200px) {
-            top: 0;
-        }
-
-        @media (max-width: 400px) {
-            font-size: 2rem;
-        }
-
-        span {
-            display: block;
-        }
-    }
-
-    h2::before {
-        content: '';
-        height: 5px;
-        width: 50px;
-        position: absolute;
-        top: -20px;
-        background: $black;
-    }
-
-    h3 {
-        text-transform: uppercase;
-        font-family: $montserrat;
-        font-weight: bold;
-    }
-}

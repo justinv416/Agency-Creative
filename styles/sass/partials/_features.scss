@@ -1,14 +1,17 @@
+//Features section/parent container.
 .features {
     background: url(../assets/home-4.jpeg) no-repeat;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
 
+    //Contains icons and text. 
     &__container {
         @include flexIt(column, center, flex-end);
         width: 60%;
         padding: 200px 0;
-        @media (max-width: 1200px) {
+
+        @media (max-width: 1400px) {
             background: rgba(255, 255, 255, 0.9);
             width: 100%;
             @include flexIt(column, center, center);
@@ -22,11 +25,12 @@
             padding: 100px 0 50px 0;
         }
 
-
+        //Inner container.
         &--inner {
             display: flex;
             width: 80%;
             padding: 40px 0;
+            
             @media (max-width: 900px) {
                 flex-direction: column;
                 padding: 0;
@@ -35,6 +39,7 @@
 
         &--content {
             display: flex;
+           
             @media (max-width: 900px) {
                 padding: 20px;
             }

@@ -1,8 +1,19 @@
+//Wrapper that 'contains' elements to a set width. 
 .wrapper {
     width: 70%;
     max-width: 1440px;
     margin: 0 auto;
+   
     @media (max-width: 900px) {
         width: 90%;
+    }
+}
+
+//Animation for <a> tags on hover.
+@keyframes grow {
+    from {
+        width: 0%;
+    } to {
+        width: 100%;
     }
 }

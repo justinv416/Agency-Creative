@@ -1,4 +1,5 @@
-@mixin flexIt($direction, $justify, $align) {
+//Flex box toolkit
+@mixin flexIt($direction: row, $justify: flex-start, $align: stretch) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
