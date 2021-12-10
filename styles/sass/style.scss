@@ -3,6 +3,9 @@
 './components/navigation', './components/header', './components/footer', './components/form';
 
 //Page specific partials. 
-@import './partials/branding', './partials/slider.scss', './partials/features',
-'./partials/team', './partials/portfolio', './partials/blog',
-'./partials/contact-page';
+@import './partials/home__page/branding', './partials/home__page/slider.scss', './partials/home__page/features',
+'./partials/home__page/team', './partials/home__page/portfolio', 
+//Blog page
+'./partials/blog__page/article', './partials/blog__page/posts', './partials/blog__page/comments',
+//Contact page
+'./partials/contact__page/contact-page';

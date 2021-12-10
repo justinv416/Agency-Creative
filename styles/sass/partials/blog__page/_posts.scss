@@ -1,0 +1,53 @@
+//Posts section. 
+.posts {
+    @media(max-width: 900px) {
+        p {
+            text-align: center;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    h2 {
+        text-transform: uppercase;
+        padding: 50px 0;
+        position: relative;
+        font-weight: bold;
+        
+        @media (max-width: 900px) {
+            text-align: center;
+        }
+    }
+
+    //Heading border.
+    h2:after {
+        content: '';
+        height: 1px;
+        background: $lightGrey;
+        position: absolute;
+        width: 100%;
+        bottom: 30px;
+        left: 0;
+    }
+
+    //'Contains' images.
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 900px) {
+            @include flexIt(column, center, center)
+        }
+    }
+
+    //Post container.
+    &__post {
+        text-transform: uppercase;
+
+        p {
+            padding: 10px 0;   
+        }
+    }
+
+}
