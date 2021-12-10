@@ -1,5 +1,5 @@
 //Header for the home page.
-#header-main {
+.header__main {
     background: url(../assets/home-1.jpeg);
     background-size: cover;
     background-position: center;
@@ -12,7 +12,7 @@
 }
 
 //Header for blog page.
-#header__blog {
+.header__blog {
   background: url(../assets/blog-1.jpeg);
   background-size: cover;
   background-position: center;
