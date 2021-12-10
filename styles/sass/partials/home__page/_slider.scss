@@ -1,5 +1,5 @@
 //Parent slider section. 
-#slider {
+.slider {
     background: $white;
     font-family: $openSans;
 
@@ -19,44 +19,43 @@
     .wrapper {
         padding: 100px 0;
     }
-}
 
-//Contains image and slider controls. 
-.slider__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 100px 0 50px 0;
-
-    @media (max-width: 720px) {
-        align-items: center;
-    }
-
-    @media (max-width: 400px) {
-        padding: 50px 0;        
-    }
-
-    .fa-angle-left, .fa-angle-right {
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-
-        @media (max-width: 720px) {
-            font-size: 2rem;
-            margin-bottom: 0;
-        }
-    }
-
-    .fa-angle-left:hover, .fa-angle-right:hover {
-        opacity: .5;
-    }
-
-    &--image {
-        border-radius: 50%;
-
-        @media (max-width: 400px) {
-            width: 50%;
-        }
-    }
-
+    //Contains image and slider controls. 
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 100px 0 50px 0;
     
+        @media (max-width: 720px) {
+            align-items: center;
+        }
+    
+        @media (max-width: 400px) {
+            padding: 50px 0;        
+        }
+    
+        .fa-angle-left, .fa-angle-right {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        
+            @media (max-width: 720px) {
+                font-size: 2rem;
+                margin-bottom: 0;
+            }
+        }
+    
+        .fa-angle-left:hover, .fa-angle-right:hover {
+            opacity: .5;
+        }
+    
+        &--image {
+            border-radius: 50%;
+        
+            @media (max-width: 400px) {
+                width: 50%;
+            }
+        }
+    }
 }
+

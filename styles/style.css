@@ -387,7 +387,7 @@ a {
   font-weight: bold;
 }
 
-#header-main {
+.header__main {
   background: url(../assets/home-1.jpeg);
   background-size: cover;
   background-position: center;
@@ -395,29 +395,29 @@ a {
   position: relative;
 }
 @media (max-width: 400px) {
-  #header-main {
+  .header__main {
     height: 90vh;
   }
 }
 
-#header__blog {
+.header__blog {
   background: url(../assets/blog-1.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 @media (max-width: 1000px) {
-  #header__blog {
+  .header__blog {
     height: 80vh;
   }
 }
 @media (max-width: 720px) {
-  #header__blog {
+  .header__blog {
     height: 60vh;
   }
 }
 @media (max-width: 520px) {
-  #header__blog {
+  .header__blog {
     height: 50vh;
   }
 }
@@ -567,21 +567,21 @@ a {
   }
 }
 
-#comment__form {
+.form {
   padding: 200px 0;
 }
-#comment__form h2 {
+.form h2 {
   font-weight: bold;
   text-transform: uppercase;
   padding: 0 0 50px 0;
   position: relative;
 }
 @media (max-width: 900px) {
-  #comment__form h2 {
+  .form h2 {
     text-align: center;
   }
 }
-#comment__form h2:after {
+.form h2:after {
   content: "";
   height: 1px;
   background: #999;
@@ -590,7 +590,7 @@ a {
   bottom: 30px;
   left: 0;
 }
-#comment__form input, #comment__form input:focus {
+.form input, .form input:focus {
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
@@ -599,16 +599,16 @@ a {
   width: 32%;
 }
 @media (max-width: 900px) {
-  #comment__form input, #comment__form input:focus {
+  .form input, .form input:focus {
     width: 100%;
   }
 }
-#comment__form input:focus {
+.form input:focus {
   outline: none;
   border-bottom: 2px solid #333;
 }
 @media (max-width: 900px) {
-  #comment__form--email {
+  .form__email {
     margin: 40px 0;
   }
 }
@@ -789,11 +789,11 @@ a {
   line-height: 30px;
 }
 
-#slider {
+.slider {
   background: #FFF;
   font-family: "Open Sans", sans-serif;
 }
-#slider p {
+.slider p {
   color: #333;
   width: 50%;
   text-align: center;
@@ -802,14 +802,13 @@ a {
   line-height: 30px;
 }
 @media (max-width: 1200px) {
-  #slider p {
+  .slider p {
     width: 100%;
   }
 }
-#slider .wrapper {
+.slider .wrapper {
   padding: 100px 0;
 }
-
 .slider__container {
   display: -webkit-box;
   display: -ms-flexbox;

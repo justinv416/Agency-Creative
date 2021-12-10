@@ -15,7 +15,7 @@
     <title>Creative</title>
 </head>
 <body>
-    <header id="header-main">
+    <header id="header__main" class="header__main">
         <div class="wrapper">
             <nav class="navigation">
                 <div class="navigation__container">
@@ -28,10 +28,12 @@
                 <h1 class="navigation__logo"><a href="index.html">Creative</a></h1>
                 <div class="navigation__container">
                     <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="link">Shop</a></li>
-                        <li class="navigation__item"><a href="contact.html" class="link">Contact</a></li>
-                        <li class="navigation__item"><a href="#"><i class="fas fa-search"></i></a></li>
-                        <li class="navigation__item"><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                        <li class="navigation__list--item"><a href="#" class="link">Shop</a></li>
+                        <li class="navigation__list--item"><a href="contact.html" class="link">Contact</a></li>
+                        <li class="navigation__list--item"><a href="#"><i class="fas fa-search"></i></a></li>
+                        <span class="sr-only">Icon indicating a magnifying glass, use to search website.</span>
+                        <li class="navigation__list--item"><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                        <span class="sr-only">Icon indicating a shopping bag, use to access cart.</span>
                     </ul>
                 </div>
                 <i class="fas fa-bars"></i>
@@ -61,7 +63,7 @@
             </div>
         </section>
 
-        <section id="slider">
+        <section id="slider" class="slider">
             <div class="wrapper">
                 <div class="slider__container">
                     <i class="fas fa-angle-left"></i>
@@ -84,6 +86,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-magic"></i>
+                            <span class="sr-only">Icon indicating magic wand</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Unique Design</h3>
@@ -93,6 +96,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-map-pin"></i>
+                            <span class="sr-only">Icon indicating map pin</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Seo Marketing</h3>
@@ -104,6 +108,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-desktop"></i>
+                            <span class="sr-only">Icon indicating computer screen</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Retina Ready</h3>
@@ -113,6 +118,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-shopping-bag"></i>
+                            <span class="sr-only">Icon indicating shopping bag</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Ecommerce Ready</h3>
@@ -124,6 +130,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-sliders-h"></i>
+                            <span class="sr-only">Icon indicating audio sliders</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Advanced Options</h3>
@@ -133,6 +140,7 @@
                     <div class="features__container--content">
                         <div class="features__container--icon">
                             <i class="fas fa-smile"></i>
+                            <span class="sr-only">Icon indicating a smiley face</span>
                         </div>
                         <div class="features__container--copy">
                             <h3>Customizable</h3>
@@ -192,8 +200,11 @@
                 </ul>
                 <div class="footer__sm">
                     <i class="fab fa-facebook-f"></i>
+                    <a class="sr-only" href="facebook.com">Link to Facebook</a>
                     <i class="fab fa-twitter"></i>
+                    <a class="sr-only" href="twitter.com">Link to Twitter</a>
                     <i class="fab fa-instagram"></i>
+                    <a class="sr-only" href="instagram.com">Link to Instagram</a>
                 </div>
             </div>
             <div class="footer__posts">
