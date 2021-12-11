@@ -44,7 +44,7 @@
     }
 
     //<ul> elements for nav.
-    &__list {
+    &__list--right, &__list--left {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -53,7 +53,7 @@
     }
 
     //<a> tags for nav. 
-    &__list .link {
+    &__list--right .link {
         position: relative;
 
         &:hover::after {
@@ -68,13 +68,13 @@
         }
     }
 
-    &__list .fa-shopping-bag {
+    &__list--right .fa-shopping-bag {
         position: relative;
         font-size: 1rem;
     }
 
     //Little green notification for shopping bag.
-    &__list .fa-shopping-bag::after {
+    &__list--right .fa-shopping-bag::after {
         content: "2";
         font-family: $openSans;
         font-size: .7rem;
@@ -102,6 +102,10 @@
     text-align: center;
     text-transform: uppercase;
     height: 50%;
+
+    @media (min-width: 900px) {
+        display: none;
+    }
 
     ul {
         height: 100%;
