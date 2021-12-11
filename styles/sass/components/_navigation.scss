@@ -4,6 +4,16 @@
     text-transform: uppercase;
     font-family: $montserrat;
 
+    @media (max-width: 900px) {
+        background: $white;
+        width: 100%;
+    }
+
+    //Navigation wrapper selector
+    &__wrapper {
+        @include flexIt(row, space-between, center)
+    }
+
     //Mobile hamburger nav.
     .fa-bars {
         font-size: 2rem;
@@ -86,6 +96,19 @@
     }
 }
 
+.navigation__mobile {
+    background: $white;
+    padding: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    height: 50%;
+
+    ul {
+        height: 100%;
+        font-size: 1.3rem;
+        @include flexIt(column, space-evenly, center);
+    }
+}
 
 
 

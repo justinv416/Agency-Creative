@@ -295,6 +295,10 @@ a {
     width: 100%;
   }
 }
+.hideNav {
+  display: none;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,6 +315,27 @@ a {
           align-items: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 900px) {
+  .navigation {
+    background: #FFF;
+    width: 100%;
+  }
+}
+.navigation__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navigation .fa-bars {
   font-size: 2rem;
@@ -385,6 +410,31 @@ a {
 .navigation__logo {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.navigation__mobile {
+  background: #FFF;
+  padding: 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+  height: 50%;
+}
+.navigation__mobile ul {
+  height: 100%;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__main {
