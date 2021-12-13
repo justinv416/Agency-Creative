@@ -172,16 +172,16 @@
         </div>
     </section>
 
-    <section id="comment__form" class="form">
+    <section id="form" class="form">
         <div class="wrapper">
             <h2>Leave a comment</h2>
-            <form action="" class="comment__form">
+            <form action="" class="comment__form" id="blog__form">
                 <div class="comment__form--container">
                     <input type="text" id="comment__form--name" placeholder="Enter your name..." required>
                     <input type="email" name="" id="comment__form--email" class="form__email" placeholder="Enter your email" required>
                     <input type="text" id="comment__form--subject" placeholder="Subject (optional)">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Here goes your comment"></textarea>
+                <textarea name="" id="comment__textarea" cols="30" rows="10" placeholder="Here goes your comment"></textarea>
                 <div class="comment__button">
                     <button type="submit" class="comment__form--button" aria-label="Button to submit comment">Submit comment</button>
                 </div>
@@ -235,7 +235,8 @@
             <h5>Creative Agency</h5>
         </div>
     </footer>
-<script src="app.js"></script>
+<script src="navbar.js"></script>
+<script src="form.js"></script>
 </body>
 
 </html>
