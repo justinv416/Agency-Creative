@@ -379,10 +379,10 @@ a {
   width: 100%;
   font-size: 0.9rem;
 }
-.navigation__list--right .link {
+.navigation__list--right .link, .navigation__list--left .link {
   position: relative;
 }
-.navigation__list--right .link:hover::after {
+.navigation__list--right .link:hover::after, .navigation__list--left .link:hover::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -454,7 +454,8 @@ a {
 
 .navigation__contact {
   background: #FFF;
-  position: static;
+  position: fixed;
+  z-index: 2;
 }
 
 .navigation__color {
@@ -1762,6 +1763,9 @@ a {
   }
 }
 
+.contact {
+  padding-top: 100px;
+}
 .contact p {
   color: #999;
 }

@@ -56,7 +56,8 @@
     }
 
     //<a> tags for nav. 
-    &__list--right .link {
+    &__list--right .link, 
+    &__list--left .link {
         position: relative;
 
         &:hover::after {
@@ -128,7 +129,8 @@
 
 .navigation__contact {
     background: $white;
-    position: static;
+    position: fixed;
+    z-index: 2;
 }
 
 .navigation__color {
