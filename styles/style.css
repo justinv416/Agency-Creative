@@ -315,10 +315,14 @@ a {
           align-items: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 @media (max-width: 900px) {
   .navigation {
-    background: #FFF;
     width: 100%;
   }
 }
@@ -413,11 +417,14 @@ a {
 }
 
 .navigation__mobile {
-  background: #FFF;
   padding: 50px 0;
+  background: #FFF;
   text-align: center;
   text-transform: uppercase;
-  height: 50%;
+  padding: 100px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 @media (min-width: 900px) {
   .navigation__mobile {
@@ -440,6 +447,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.navigation__mobile ul li {
+  padding: 20px 0;
+}
+
+.navigation__contact {
+  background: #FFF;
+  position: static;
+}
+
+.navigation__color {
+  background: #FFF;
 }
 
 .header__main {
@@ -748,7 +767,7 @@ a {
   background: #999;
   top: -65px;
   left: 50%;
-  z-index: 1;
+  z-index: 0;
 }
 
 .branding {
@@ -773,7 +792,7 @@ a {
 }
 .branding__image--top {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   width: 50%;
   top: -120px;
   left: -120px;

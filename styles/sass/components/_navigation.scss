@@ -3,9 +3,12 @@
     @include flexIt(row, space-between, center);
     text-transform: uppercase;
     font-family: $montserrat;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: background-color 0.3s ease-in-out;
 
     @media (max-width: 900px) {
-        background: $white;
         width: 100%;
     }
 
@@ -96,12 +99,16 @@
     }
 }
 
+//Overlay for mobile navigation
 .navigation__mobile {
-    background: $white;
     padding: 50px 0;
+    background: $white;
     text-align: center;
     text-transform: uppercase;
-    height: 50%;
+    padding: 100px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
     @media (min-width: 900px) {
         display: none;
@@ -111,9 +118,22 @@
         height: 100%;
         font-size: 1.3rem;
         @include flexIt(column, space-evenly, center);
+    
+        li {
+            padding: 20px 0;
+        }
+        
     }
 }
 
+.navigation__contact {
+    background: $white;
+    position: static;
+}
+
+.navigation__color {
+    background: $white;
+}
 
 
 
