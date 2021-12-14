@@ -7,6 +7,14 @@ const submitComment = function() {
     console.log(commentText.value)
 };
 
+    let count = 02;
+
+function updateNumber() {
+    count++;
+    document.querySelector('.comments__number').textContent = count;
+    return count;
+};
+
 function getDate() {
     const newDate = new Date();
     let date = newDate.toDateString();
@@ -16,29 +24,37 @@ function getDate() {
 const printDate = getDate();
 console.log(printDate)
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+function createComment() {
     const commentContainer = document.createElement('div');
     const imageContainer = document.createElement('div');
     const commenterText = document.createElement('div');
     const profileImage = document.createElement('img');
     const commenterName = document.createElement('h3');
     const commentParagraph = document.createElement('p');
-    // const commentDate = document.createElement('p');
-    profileImage.src = './assets/generic-profile.png';
+    const commentDate = document.createElement('p');
+     profileImage.src = './assets/generic-profile.png';
     imageContainer.appendChild(profileImage);
-    imageContainer.classList.add('comment__image')
+    imageContainer.classList.add('comment__image');
     commenterName.textContent = commentName.value;
     commenterName.classList.add('comment__name');
     commentParagraph.textContent = commentText.value;
     commentParagraph.classList.add('comment__text');
     commenterText.appendChild(commenterName);
     commenterText.appendChild(commentParagraph);
-    commenterText.classList.add('comment__container')
+    commenterText.classList.add('comment__container');
+    commentDate.textContent = printDate;
+    commentDate.classList.add('comment__date');
     commentContainer.appendChild(imageContainer);
     commentContainer.appendChild(commenterText);
-    commentContainer.classList.add('comment')
-    document.querySelector('.comments__wrapper').appendChild(commentContainer)
+    commenterText.appendChild(commentDate);
+    commentContainer.classList.add('comment');
+    document.querySelector('.comments__wrapper').appendChild(commentContainer);
+}
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    createComment();
+    updateNumber();
 });
 
 {/* <div class="comment">
