@@ -462,6 +462,10 @@ a {
   background: #FFF;
 }
 
+.fa-times {
+  font-size: 3rem;
+}
+
 .header__main {
   background: url(../assets/home-1.jpeg);
   background-size: cover;
