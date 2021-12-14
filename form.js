@@ -7,24 +7,14 @@ const submitComment = function() {
     console.log(commentText.value)
 };
 
-// function createComment() {
-//     const commentContainer = document.createElement('div');
-//     const imageContainer = document.createElement('div');
-//     const commenterText = document.createElement('div');
-//     const profileImage = document.createElement('img');
-//     const commenterName = document.createElement('h3');
-//     const commentParagraph = document.createElement('p');
-//     // const commentDate = document.createElement('p');
-//     profileImage.src = './assets/generic-profile.png';
-//     imageContainer.appendChild(profileImage);
-//     commenterName.textContent = commentName.value;
-//     commentParagraph.textContent = commentText.value;
-//     commentText.appendChild(commenterName);
-//     commentText.appendChild(commenterText);
-//     commentContainer.appendChild(imageContainer);
-//     commentContainer.appendChild(commentText);
-//     document.querySelector('#comment').appendChild(commentContainer)
-// }
+function getDate() {
+    const newDate = new Date();
+    let date = newDate.toDateString();
+    return date;
+};
+
+const printDate = getDate();
+console.log(printDate)
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -37,15 +27,18 @@ form.addEventListener('submit', function(event) {
     // const commentDate = document.createElement('p');
     profileImage.src = './assets/generic-profile.png';
     imageContainer.appendChild(profileImage);
+    imageContainer.classList.add('comment__image')
     commenterName.textContent = commentName.value;
+    commenterName.classList.add('comment__name');
     commentParagraph.textContent = commentText.value;
+    commentParagraph.classList.add('comment__text');
     commenterText.appendChild(commenterName);
     commenterText.appendChild(commentParagraph);
     commenterText.classList.add('comment__container')
     commentContainer.appendChild(imageContainer);
     commentContainer.appendChild(commenterText);
     commentContainer.classList.add('comment')
-    document.querySelector('#comments').appendChild(commentContainer)
+    document.querySelector('.comments__wrapper').appendChild(commentContainer)
 });
 
 {/* <div class="comment">
