@@ -5,6 +5,7 @@ Creative is website that is a multi-page PSD conversion based on the design file
 ## Built With
 *   HTML5
 *   SASS 
+*   Javascript
 *   BEM Methodology
 
 ## Link To Live Site
