@@ -1,25 +1,26 @@
+//Initializes blogApp as an empty object. 
 const blogApp = {};
 
+//Sets initial number of comments to two;
 blogApp.commentCount = 02;
-
+//Function that updates the number of comments. 
 blogApp.updateNumber = function() {
     blogApp.commentCount++;
     document.querySelector('.comments__number').textContent = blogApp.commentCount;
     return blogApp.commentCount;
 };
 
+//Function that will get the current date.
 blogApp.getDate = function() {
     const newDate = new Date();
+    //Converts numeric date to a string. 
     let date = newDate.toDateString();
     return date;
 };
 
-blogApp.printDate = blogApp.getDate();
+
 //Function that create a comment, EXTREMELY ugly and inefficient need to find a better way to do this at some point without innerHTML.
 blogApp.createComment = function() {
-    const commentName = document.querySelector('#comment__form--name');
-    const commentText = document.querySelector('#comment__textarea');
-
     const commentContainer = document.createElement('div');
     const imageContainer = document.createElement('div');
     const commenterText = document.createElement('div');
@@ -28,9 +29,10 @@ blogApp.createComment = function() {
     const commentParagraph = document.createElement('p');
     const commentDate = document.createElement('p');
 
+    blogApp.printDate = blogApp.getDate();
     profileImage.src = './assets/generic-profile.png';
-    commentParagraph.textContent = commentText.value;
-    commenterName.textContent = commentName.value;
+    commentParagraph.textContent = document.querySelector('#comment__textarea').value;
+    commenterName.textContent = document.querySelector('#comment__form--name').value;
     commentDate.textContent = blogApp.printDate;
 
     imageContainer.classList.add('comment__image');
@@ -46,7 +48,8 @@ blogApp.createComment = function() {
     document.querySelector('.comments__wrapper').appendChild(commentContainer);
 }
 
-blogApp.formsControls = function() {
+//Function that holds the event listener for form submission.
+blogApp.formControls = function() {
     const form = document.querySelector('#blog__form');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -55,9 +58,10 @@ blogApp.formsControls = function() {
     });
 };
 
-
+//function that will initialize the app.
 blogApp.init = function() {
-    blogApp.formsControls();
+    blogApp.formControls();
 }
 
+//Initialize the app. 
 blogApp.init();

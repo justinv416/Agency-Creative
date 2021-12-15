@@ -119,12 +119,7 @@
     ul {
         height: 100%;
         font-size: 1.3rem;
-        @include flexIt(column, space-evenly, center);
-    
-        li {
-            padding: 20px 0;
-        }
-        
+        @include flexIt(column, space-evenly, center);        
     }
 }
 

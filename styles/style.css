@@ -449,9 +449,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.navigation__mobile ul li {
-  padding: 20px 0;
-}
 
 .navigation__contact {
   background: #FFF;

@@ -1,14 +1,17 @@
+//Sets navApp as an empty object. 
 const navApp = {};
 
-// //Function to close mobile navigation. 
+//Function to close mobile navigation. 
 navApp.closeNav = function() {
     document.querySelector('.navigation__mobile').classList.toggle('hideNav');
     document.querySelector('.fa-bars').classList.toggle('fa-times');
 };
 
-// //Event Listeners
-navApp.hamburger = document.querySelector('.fa-bars');
-navApp.hamburger.addEventListener('click', navApp.closeNav);
+//Event Listeners
+navApp.triggerNav = function(){
+    navApp.hamburger = document.querySelector('.fa-bars');
+    navApp.hamburger.addEventListener('click', navApp.closeNav);
+};
 
 //Changing the color of navbar if window is scrolled past initial position.
 navApp.changeNavColor = function(){
@@ -22,10 +25,12 @@ navApp.changeNavColor = function(){
     });
 };
 
-
+//Function that initializes the app.
 navApp.init = function() {
     navApp.changeNavColor();
     navApp.closeNav();
+    navApp.triggerNav();
 };
 
+//Initialize the app.
 navApp.init();
