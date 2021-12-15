@@ -123,6 +123,7 @@
     }
 }
 
+
 .navigation__contact {
     background: $white;
     position: fixed;
@@ -137,4 +138,7 @@
     font-size: 3rem;
 }
 
+.hideNav {
+    display: none;
+}
 

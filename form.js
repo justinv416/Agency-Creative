@@ -7,7 +7,6 @@ blogApp.commentCount = 02;
 blogApp.updateNumber = function() {
     blogApp.commentCount++;
     document.querySelector('.comments__number').textContent = blogApp.commentCount;
-    return blogApp.commentCount;
 };
 
 //Function that will get the current date.
@@ -18,8 +17,7 @@ blogApp.getDate = function() {
     return date;
 };
 
-
-//Function that create a comment, EXTREMELY ugly and inefficient need to find a better way to do this at some point without innerHTML.
+//Function that creates a comment, EXTREMELY ugly and inefficient need to find a better way to do this at some point without innerHTML.
 blogApp.createComment = function() {
     const commentContainer = document.createElement('div');
     const imageContainer = document.createElement('div');

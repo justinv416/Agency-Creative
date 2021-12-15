@@ -20,3 +20,12 @@ If there are any concerns with any of these two approaches I would absolutely lo
 Thanks for reading, 
 
 Justin
+
+## NOW WITH JAVASCRIPT!!! :gear:
+
+New features added include:
+
+* Fully functional mobile navigation.
+* Fixed navbar with color change on scroll.
+* Functional image carousel on main page.
+* Ability to add comments on the blog page.
