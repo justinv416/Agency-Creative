@@ -1,37 +1,43 @@
-const leftArrow = document.querySelector('.fa-angle-left');
-const rightArrow = document.querySelector('.fa-angle-right');
-const sliderImage = document.querySelector('.slider__container--image');
-const arrayOfImages = [
+sliderApp = {};
+
+sliderApp.leftArrow = document.querySelector('.fa-angle-left');
+sliderApp.rightArrow = document.querySelector('.fa-angle-right');
+sliderApp.sliderImage = document.querySelector('.slider__container--image');
+sliderApp.arrayOfImages = [
     './assets/home-3.jpeg',
     './assets/slider/james-mckinven-cauCwvTkHLM-unsplash.jpg',
     './assets/slider/true-agency-Q8otix2SVko-unsplash.jpg'
 ];
 
 //Function to change image in slider section. 
-let count = 0;
-const setImage = function() {
-    sliderImage.src = arrayOfImages[count];
+sliderApp.imageCount = 0;
+sliderApp.setImage = function() {
+    sliderApp.sliderImage.src = sliderApp.arrayOfImages[sliderApp.imageCount];
 };
 
-setImage();
-
-const nextImage = function() {
-    count++;
-    if(count >= arrayOfImages.length) {
-        count = 0;
+sliderApp.nextImage = function() {
+    sliderApp.imageCount++;
+    if(sliderApp.imageCount >= sliderApp.arrayOfImages.length) {
+        sliderApp.imageCount = 0;
     }
-    sliderImage.src = arrayOfImages[count];
-    console.log(count);
+    sliderApp.sliderImage.src = sliderApp.arrayOfImages[sliderApp.imageCount];
 };
 
-const prevImage = function() {
-    count--;
-    if(count < 0) {
-        count = arrayOfImages.length - 1;
+sliderApp.prevImage = function() {
+    sliderApp.imageCount--;
+    if(sliderApp.imageCount < 0) {
+        sliderApp.imageCount = sliderApp.arrayOfImages.length - 1;
     }
-    sliderImage.src = arrayOfImages[count];
-    console.log(count);
+    sliderApp.sliderImage.src = sliderApp.arrayOfImages[sliderApp.imageCount];
 };
 
-rightArrow.addEventListener('click', nextImage);
-leftArrow.addEventListener('click', prevImage);
+sliderApp.rightArrow.addEventListener('click', sliderApp.nextImage);
+sliderApp.leftArrow.addEventListener('click', sliderApp.prevImage);
+
+sliderApp.init = function() {
+    sliderApp.setImage();
+    sliderApp.prevImage();
+    sliderApp.nextImage();
+};
+
+sliderApp.init();

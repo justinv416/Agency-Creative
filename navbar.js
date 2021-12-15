@@ -1,18 +1,31 @@
+const navApp = {};
+
 // //Function to close mobile navigation. 
-const closeNav = function() {
+navApp.closeNav = function() {
     document.querySelector('.navigation__mobile').classList.toggle('hideNav');
-    document.querySelector('.fa-bars').classList.toggle('fa-times')
+    document.querySelector('.fa-bars').classList.toggle('fa-times');
 };
 
 // //Event Listeners
-document.querySelector('.fa-bars').addEventListener('click', closeNav);
+navApp.hamburger = document.querySelector('.fa-bars');
+navApp.hamburger.addEventListener('click', navApp.closeNav);
 
 //Changing the color of navbar if window is scrolled past initial position.
-window.addEventListener('scroll', function(){
-    const navigationMain = document.querySelector('.navigation');
-    if(this.scrollY > 0) {
-        navigationMain.classList.add('navigation__color');
-    } else {
-        navigationMain.classList.remove('navigation__color');
-    }
-});
+navApp.changeNavColor = function(){
+    window.addEventListener('scroll', function(){
+        const navigationMain = document.querySelector('.navigation');
+        if(this.scrollY > 0) {
+            navigationMain.classList.add('navigation__color');
+        } else {
+            navigationMain.classList.remove('navigation__color');
+        };
+    });
+};
+
+
+navApp.init = function() {
+    navApp.changeNavColor();
+    navApp.closeNav();
+};
+
+navApp.init();

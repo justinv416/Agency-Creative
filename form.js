@@ -1,30 +1,25 @@
-const form = document.querySelector('#blog__form');
-const commentName = document.querySelector('#comment__form--name');
-const commentText = document.querySelector('#comment__textarea')
+const blogApp = {};
 
-const submitComment = function() {
-    console.log(commentName.value)
-    console.log(commentText.value)
+blogApp.commentCount = 02;
+
+blogApp.updateNumber = function() {
+    blogApp.commentCount++;
+    document.querySelector('.comments__number').textContent = blogApp.commentCount;
+    return blogApp.commentCount;
 };
 
-    let count = 02;
-
-function updateNumber() {
-    count++;
-    document.querySelector('.comments__number').textContent = count;
-    return count;
-};
-
-function getDate() {
+blogApp.getDate = function() {
     const newDate = new Date();
     let date = newDate.toDateString();
     return date;
 };
 
-const printDate = getDate();
-console.log(printDate)
+blogApp.printDate = blogApp.getDate();
+//Function that create a comment, EXTREMELY ugly and inefficient need to find a better way to do this at some point without innerHTML.
+blogApp.createComment = function() {
+    const commentName = document.querySelector('#comment__form--name');
+    const commentText = document.querySelector('#comment__textarea');
 
-function createComment() {
     const commentContainer = document.createElement('div');
     const imageContainer = document.createElement('div');
     const commenterText = document.createElement('div');
@@ -32,39 +27,37 @@ function createComment() {
     const commenterName = document.createElement('h3');
     const commentParagraph = document.createElement('p');
     const commentDate = document.createElement('p');
-     profileImage.src = './assets/generic-profile.png';
-    imageContainer.appendChild(profileImage);
-    imageContainer.classList.add('comment__image');
-    commenterName.textContent = commentName.value;
-    commenterName.classList.add('comment__name');
+
+    profileImage.src = './assets/generic-profile.png';
     commentParagraph.textContent = commentText.value;
+    commenterName.textContent = commentName.value;
+    commentDate.textContent = blogApp.printDate;
+
+    imageContainer.classList.add('comment__image');
+    commenterName.classList.add('comment__name');
     commentParagraph.classList.add('comment__text');
-    commenterText.appendChild(commenterName);
-    commenterText.appendChild(commentParagraph);
     commenterText.classList.add('comment__container');
-    commentDate.textContent = printDate;
     commentDate.classList.add('comment__date');
-    commentContainer.appendChild(imageContainer);
-    commentContainer.appendChild(commenterText);
-    commenterText.appendChild(commentDate);
     commentContainer.classList.add('comment');
+
+    imageContainer.appendChild(profileImage);
+    commentContainer.append(imageContainer, commenterText);
+    commenterText.append(commenterName, commentParagraph, commentDate);
     document.querySelector('.comments__wrapper').appendChild(commentContainer);
 }
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    createComment();
-    updateNumber();
-});
+blogApp.formsControls = function() {
+    const form = document.querySelector('#blog__form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        blogApp.createComment();
+        blogApp.updateNumber();
+    });
+};
 
-{/* <div class="comment">
-                <div class="">
-                    <img src="./assets/blog-7.jpeg" alt="A profile picture of a smiling man in a white shirt.">
-                </div>
-                <div class="comment__container">
-                    <h3 class="comment__name">Daniel Vandaft <span><a href="#"> - reply</a></span></h3>
-                    <p class="comment__text">Pitch agile development business plan stelth channels prototype mass market
-                        product management value proposition startup strategy.</p>
-                    <p class="comment__date">Jul 17, 2015 at 15 hours ago</p>
-                </div>
-            </div> */}
+
+blogApp.init = function() {
+    blogApp.formsControls();
+}
+
+blogApp.init();
