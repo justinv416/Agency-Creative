@@ -17,8 +17,10 @@ blogApp.getDate = function() {
     return date;
 };
 
-//Function that creates a comment, EXTREMELY ugly and inefficient need to find a better way to do this at some point without innerHTML.
+//Function that creates a comment.
+//EXTREMELY UGLY and inefficient need to figure out a better way to do this at some point without innerHTML, but it works.
 blogApp.createComment = function() {
+    //Storing created elements in respective variables. 
     const commentContainer = document.createElement('div');
     const imageContainer = document.createElement('div');
     const commenterText = document.createElement('div');
@@ -27,12 +29,14 @@ blogApp.createComment = function() {
     const commentParagraph = document.createElement('p');
     const commentDate = document.createElement('p');
 
+    //Adding content to above variables. 
     blogApp.printDate = blogApp.getDate();
     profileImage.src = './assets/generic-profile.png';
     commentParagraph.textContent = document.querySelector('#comment__textarea').value;
     commenterName.textContent = document.querySelector('#comment__form--name').value;
     commentDate.textContent = blogApp.printDate;
 
+    //Adding classes to match the styles of the default comments on page/
     imageContainer.classList.add('comment__image');
     commenterName.classList.add('comment__name');
     commentParagraph.classList.add('comment__text');
@@ -40,11 +44,12 @@ blogApp.createComment = function() {
     commentDate.classList.add('comment__date');
     commentContainer.classList.add('comment');
 
+    //Appending elements
     imageContainer.appendChild(profileImage);
     commentContainer.append(imageContainer, commenterText);
     commenterText.append(commenterName, commentParagraph, commentDate);
     document.querySelector('.comments__wrapper').appendChild(commentContainer);
-}
+};
 
 //Function that holds the event listener for form submission.
 blogApp.formControls = function() {
@@ -59,7 +64,7 @@ blogApp.formControls = function() {
 //function that will initialize the app.
 blogApp.init = function() {
     blogApp.formControls();
-}
+};
 
 //Initialize the app. 
 blogApp.init();
