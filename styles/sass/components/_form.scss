@@ -79,13 +79,25 @@
     &--button {
         background: none;
         border-style: none;
-        border-bottom: 2px solid $black;
         text-transform: uppercase;
+        border-bottom: 2px solid $black;
         padding-bottom: 5px;
-        
-        @media (max-width: 900px) {
-            
-        }
+        text-align: inherit;
+        width: auto;
+    }
+}
+
+#comment__form--button {
+    background: none;
+    border-style: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid $black;
+    padding-bottom: 5px;
+    text-align: inherit;
+    width: auto;
+
+    &:focus {
+        border-bottom: 2px solid $black;
     }
 }
 

@@ -3,6 +3,19 @@
     @include flexIt(row, space-between, center);
     text-transform: uppercase;
     font-family: $montserrat;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: background-color 0.3s ease-in-out;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+
+    //Navigation wrapper selector
+    &__wrapper {
+        @include flexIt(row, space-between, center)
+    }
 
     //Mobile hamburger nav.
     .fa-bars {
@@ -34,7 +47,7 @@
     }
 
     //<ul> elements for nav.
-    &__list {
+    &__list--right, &__list--left {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,7 +56,8 @@
     }
 
     //<a> tags for nav. 
-    &__list .link {
+    &__list--right .link, 
+    &__list--left .link {
         position: relative;
 
         &:hover::after {
@@ -58,13 +72,13 @@
         }
     }
 
-    &__list .fa-shopping-bag {
+    &__list--right .fa-shopping-bag {
         position: relative;
         font-size: 1rem;
     }
 
     //Little green notification for shopping bag.
-    &__list .fa-shopping-bag::after {
+    &__list--right .fa-shopping-bag::after {
         content: "2";
         font-family: $openSans;
         font-size: .7rem;
@@ -86,7 +100,62 @@
     }
 }
 
+//Overlay for mobile navigation
+.navigation__mobile {
+    padding: 50px 0;
+    background: $white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 100px 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 
+    @media (min-width: 900px) {
+        display: none;
+    }
 
+    ul {
+        height: 100%;
+        font-size: 1.3rem;
+        @include flexIt(column, space-evenly, center);        
+    }
+}
 
+//Mobile specific hover animation. 
+.navigation__item--mobile {
+    position: relative;
+    
+    &:hover::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $black;
+        bottom: -10px;
+        left: 0;
+        animation: grow 0.5s forwards;
+    }
+}
+
+//Class that sets background color on nav on scroll. 
+.navigation__color {
+    background: $white;
+}
+
+//FA close nav icon. 
+.fa-times, 
+.fa-bars {
+    transition: font-size 0.3s ease-in-out;
+
+    &:hover {
+        font-size: 2.5rem;
+    }
+}
+
+//Class that will hide the nav in JS. 
+.hideNav {
+    display: none;
+}
 

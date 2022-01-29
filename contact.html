@@ -17,19 +17,19 @@
 </head>
 <body>
 
-    <header>
-        <div class="wrapper">
-            <nav class="navigation">
+    <header class="header__contact">
+        <nav class="navigation navigation__contact">
+            <div class="wrapper navigation__wrapper">
                 <div class="navigation__container">
-                    <ul class="navigation__list">
-                        <li class="navigation__list--item"><a href="index.html" class="link">Home</a></li>
-                        <li class="navigation__list--item"><a href="blog.html" class="link">Blog</a></li>
-                        <li class="navigation__list--item"><a href="index.html#portfolio" class="link">Portfolio</a></li>
+                    <ul class="navigation__list--left">
+                        <li class="navigation__item"><a href="index.html" class="link">Home</a></li>
+                        <li class="navigation__item"><a href="blog.html" class="link">Blog</a></li>
+                        <li class="navigation__item"><a href="#portfolio" class="link">Portfolio</a></li>
                     </ul>
                 </div>
-                <h1 class="navigation__logo"><a href="index.html">Creative</a></h1>
+                <h1 class="navigation__logo"><a href="index.html" class="navigation__logo">Creative</a></h1>
                 <div class="navigation__container">
-                    <ul class="navigation__list">
+                    <ul class="navigation__list--right">
                         <li class="navigation__list--item"><a href="#" class="link">Shop</a></li>
                         <li class="navigation__list--item"><a href="contact.html" class="link">Contact</a></li>
                         <li class="navigation__list--item"><a href="#"><i class="fas fa-search"></i></a></li>
@@ -39,8 +39,17 @@
                     </ul>
                 </div>
                 <i class="fas fa-bars"></i>
-            </nav>
-        </div>
+            </div>
+        </nav>
+        <nav class="navigation__mobile hideNav" aria-label="nav mobile-nav">
+            <ul>
+                <li class="navigation__item--mobile"><a href="index.html" class="link">Home</a></li>
+                <li class="navigation__item--mobile"><a href="blog.html" class="link">Blog</a></li>
+                <li class="navigation__item--mobile"><a href="#portfolio" class="link">Portfolio</a></li>
+                <li class="navigation__item--mobile"><a href="#" class="link">Shop</a></li>
+                <li class="navigation__item--mobile"><a href="contact.html" class="link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="contact" class="contact">
@@ -105,8 +114,6 @@
         <img src="./assets/contact-2.jpeg" alt="An image of a woman smiling while talking on the phone." class="contact__image">
     </section>
 
-</body>
-
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__contact">
@@ -142,7 +149,8 @@
                 <form action="">
                     <label for="email">Signup for emails and notifications below.</label>
                     <div class="footer__form--email">
-                        <input type="email" placeholder="Enter your email"><button type="submit" aria-label="Button to submit email"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        <input type="email" placeholder="Enter your email"><button type="submit"
+                            aria-label="Button to submit email"><i class="fas fa-long-arrow-alt-right"></i></button>
                         <span class="sr-only">Click to submit email</span>
                     </div>
                 </form>
@@ -152,4 +160,7 @@
             <h5>Creative Agency</h5>
         </div>
     </footer>
+    <script src="navbar.js"></script>
+</body>
+
 </html>
