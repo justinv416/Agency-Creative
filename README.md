@@ -1,6 +1,7 @@
 ## About This Project
 
-Creative is website that is a multi-page PSD conversion based on the design files provided. 
+Creative is website that is a multi-page agency style PSD conversion. For this project I was tasked to convert PSD design files to a fully functional and responsive website. 
+This website was built with HTML5, SCSS, Vanilla Javascript, and BEM methodology. This project is fully responsive, accessible, and includes: a functional mobile navigation, an image carousel on the main page, and the ability to add comments on the blog page. 
 
 ## Built With
 *   HTML5
