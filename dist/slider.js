@@ -3,9 +3,9 @@ sliderApp = {};
 
 //An array that will hold the sources of images. 
 sliderApp.arrayOfImages = [
-    './assets/home-3.jpeg',
-    './assets/slider/james-mckinven-cauCwvTkHLM-unsplash.jpg',
-    './assets/slider/true-agency-Q8otix2SVko-unsplash.jpg'
+    '../assets/home-3.jpeg',
+    '../assets/slider/james-mckinven-cauCwvTkHLM-unsplash.jpg',
+    '../assets/slider/true-agency-Q8otix2SVko-unsplash.jpg'
 ];
 
 //Function to change image in slider section. 
