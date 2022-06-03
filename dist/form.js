@@ -31,7 +31,7 @@ blogApp.createComment = function() {
 
     //Adding content to above variables. 
     blogApp.printDate = blogApp.getDate();
-    profileImage.src = './assets/generic-profile.png';
+    profileImage.src = '../assets/generic-profile.png';
     commentParagraph.textContent = document.querySelector('#comment__textarea').value;
     commenterName.textContent = document.querySelector('#comment__form--name').value;
     commentDate.textContent = blogApp.printDate;
